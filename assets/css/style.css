@@ -165,7 +165,7 @@ body,.zero{
 }
 
 .navswitch{
-    width: 400px;
+    width: 600px;
     height: 50px;
     margin: 0 auto;
     background: #333;
@@ -188,7 +188,7 @@ body,.zero{
 
 .navswitch ul li{
     float: left;
-    width: 33%;
+    width: 25%;
 
 }
 .navswitch ul li a{

@@ -70,24 +70,26 @@ public partial class register : System.Web.UI.Page
         SqlConnection con = new SqlConnection();
         con.ConnectionString = ConfigurationManager.ConnectionStrings["calawebConnectionString"].ToString();
 
-        string strSQL = "SELECT distinct usuario from UserData where usuario = @name and password = @pass and application = @app";
+        string strSQL = "SELECT (usuario + ','+ email_empresa) as datos from UserData where password = @pass and application = @app and (usuario = @name or email_empresa = @name)";
         SqlCommand cmd = new SqlCommand(strSQL, con);
-        cmd.Parameters.Add("@name", SqlDbType.VarChar, 100);
+        cmd.Parameters.Add("@name", SqlDbType.VarChar, 150);
         cmd.Parameters.Add("@pass", SqlDbType.VarChar, 300);
         cmd.Parameters.Add("@app", SqlDbType.VarChar, 100);
        
-        //cmd2.Parameters["@Id"].Value = 0;
         cmd.Parameters["@name"].Value = name;
         cmd.Parameters["@pass"].Value = pass;
         cmd.Parameters["@app"].Value = app;
-
 
         try
         {
             con.Open();
             usuario = (String)cmd.ExecuteScalar();
+            var test = usuario.Split(',');
+            string nombre = test[0];
+            string correo = test[1];
+
             con.Close();
-            if (name == usuario)
+            if ((name == nombre) || (name == correo))
             {
                 resultado = "ok";
             }

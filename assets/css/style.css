@@ -1,0 +1,246 @@
+
+@font-face {
+    font-family: 'proximanova-regular';
+    src: url('fonts/proximanova-regular_0-webfont.eot');
+    src: url('fonts/proximanova-regular_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-regular_0-webfont.woff') format('woff'),
+         url('fonts/proximanova-regular_0-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-regular_0-webfont.svg#webfontregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'proximanova-lihgt';
+    src: url('fonts/proximanova-light_0-webfont.eot');
+    src: url('fonts/proximanova-light_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-light_0-webfont.woff') format('woff'),
+         url('fonts/proximanova-light_0-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-light_0-webfont.svg#webfontregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('fonts/proximanova-bold_0-webfont.eot');
+    src: url('fonts/proximanova-bold_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-bold_0-webfont.woff') format('woff'),
+         url('fonts/proximanova-bold_0-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-bold_0-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'calligraffitiregular';
+    src: url('fonts/Calligraffiti-webfont.eot');
+    src: url('fonts/Calligraffiti-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Calligraffiti-webfont.woff') format('woff'),
+         url('fonts/Calligraffiti-webfont.ttf') format('truetype'),
+         url('fonts/Calligraffiti-webfont.svg#calligraffitiregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'angelinaregular';
+    src: url('fonts/angelina-webfont.eot');
+    src: url('fonts/angelina-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/angelina-webfont.woff') format('woff'),
+         url('fonts/angelina-webfont.ttf') format('truetype'),
+         url('fonts/angelina-webfont.svg#angelinaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body,.zero{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background: url(../img/bgbody.jpg);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.navtop{
+    width: 100%;
+    height: 100px;
+    background-color: #E30A21;
+    margin-bottom: 40px;
+}
+
+.navtop .span8 img{
+    width: 150px;
+    margin-top: 20px;
+}
+
+.navtop .span4 img{
+    width: 280px;
+    margin-top: 25px;
+    float: right;
+}
+
+.buttonbox{
+    max-width: 240px;
+    min-height: 90px;
+    background: url(../img/bgbox.jpg);
+    border-radius: 0.5em;
+    margin: 0 auto;
+    border: 0.1em dashed #fff;
+}
+
+
+.buttonbox .tittlebox{
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 0.5em 0.5em 0 0;
+    font-family: 'proximanova-lihgt';
+    font-size: 1em;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+}
+
+.buttonbox .textbox{
+    width: 90%;
+    min-height: 30px;
+    text-align: center;
+    font-family: 'proxima_nova_rgbold';
+    font-size: 1.2em;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
+.buttonbox .textbox a{
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px #666;
+    padding: 0px 10px;
+
+
+    
+}
+.buttonbox .textbox a:hover{
+    color: #fff;
+    text-shadow: 0px 0px 5px #fff;
+
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+
+    
+}
+
+.showcontent{
+ 
+    background: url(../img/responselogo.png) no-repeat;
+    background-position: 80px 120px;
+    width: 100%;
+    height:320px;
+
+}
+
+
+.sep{
+    width: 100;
+    display: block;
+    height: 15px;
+}
+
+.navswitch{
+    width: 400px;
+    height: 50px;
+    margin: 0 auto;
+    background: #333;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+
+.navswitch ul{
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    font-family: 'proximanova-regular';
+
+    
+}
+
+.navswitch ul li{
+    float: left;
+    width: 33%;
+
+}
+.navswitch ul li a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 17px 14px;
+    border-radius: 5px;
+
+}
+
+.navswitch ul li a:hover{
+    color: #fff;
+    line-height: 30px;
+    background-color: #c00;
+    -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+
+
+}
+
+#container1, #container2, #container3, #container4, #container5,
+#container6, #container7, #container8, #container9, #container10, #container11,
+#container12, #container13, #container14, #container15{
+  display:none;
+  height:auto;
+  width: 100%;
+  font-family: 'proximanova-lihgt';
+  font-size: 1.4em;
+  text-align: center;
+  color: #fff;
+  line-height: 1.5em;
+  padding: 30px 10px; 
+  background-color: #333;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 8px #666;
+
+
+}
+
+#container4{
+    text-align: left;
+}
+
+#container12{
+    font-size: 1.3em;
+}
+
+.none{
+    display: none;
+}
+

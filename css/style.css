@@ -1,0 +1,1514 @@
+    /*----------ESTILOS FUENTES--------*/
+    
+    
+    @font-face {
+        font-family: 'proxima_novalight';
+        src: url('fonts/proximanova-light_0-webfont.eot');
+        src: url('fonts/proximanova-light_0-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/proximanova-light_0-webfont.woff') format('woff'),
+             url('fonts/proximanova-light_0-webfont.ttf') format('truetype'),
+             url('fonts/proximanova-light_0-webfont.svg#proxima_novalight') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+    
+    
+    
+    
+    @font-face {
+        font-family: 'proxima_nova_rgregular';
+        src: url('proximanova-regular_0-webfont.eot');
+        src: url('proximanova-regular_0-webfont.eot?#iefix') format('embedded-opentype'),
+             url('proximanova-regular_0-webfont.woff') format('woff'),
+             url('proximanova-regular_0-webfont.ttf') format('truetype'),
+             url('proximanova-regular_0-webfont.svg#proxima_nova_rgregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+    
+        /* GLOBAL STYLES
+        -------------------------------------------------- */
+        /* Padding below the footer and lighter body text */
+    
+        body {
+          background-color: #FFF;
+          color: #333333;
+          font-family: 'proxima_novalight', 'proxima_nova_rgregular', Helvetica, sans-serif;
+          position: relative;
+          max-width: 100%;
+        }
+    
+    
+    
+        /* CUSTOMIZE THE NAVBAR
+        -------------------------------------------------- */
+    
+        /* Special class on .container surrounding .navbar, used for positioning it into place. */
+        .navbar-wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 10;
+          margin-top: 20px;
+          margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+        }
+        .navbar-wrapper .navbar {
+    
+        }
+    
+        /* Remove border and change up box shadow for more contrast */
+        .navbar .navbar-inner {
+          border: 0;
+          -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+             -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+                  box-shadow: 0 2px 10px rgba(0,0,0,.25);
+          height: 70px;
+          z-index: 999;
+        }
+        
+        
+    
+        /* Downsize the brand/project name a bit */
+        .navbar .brand {
+          padding: 14px 20px 0px; /* Increase vertical padding to match navbar links */
+          font-size: 16px;
+          font-weight: bold;
+          text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+        }
+    
+        /* Navbar links: increase padding for taller navbar */
+        .navbar .nav > li > a {
+          padding: 25px 20px;
+        }
+    
+        /* Offset the responsive button for proper vertical alignment */
+        .navbar .btn-navbar {
+          margin-top: 10px;
+        }
+        
+        .brand img{
+            max-height: 70px;
+        }
+        
+        .mobile{
+            display: none;
+        }
+        
+        
+        .nav-collapse, .nav-collapse.collapse {
+            z-index: 999;
+            background-color: #eceeef;
+        }
+        
+        .navbar-inverse .nav-collapse .nav > li > a:hover, .navbar-inverse .nav-collapse .nav > li > a:focus, .navbar-inverse .nav-collapse .dropdown-menu a:hover, .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+            background-color: #cc0000;
+        }
+        
+        .navbar-inverse .nav-collapse .nav > li > a, .navbar-inverse .nav-collapse .dropdown-menu a {
+            color: #a1aaaf;
+        }    
+        @media (max-width: 480px) {
+            .desktop{
+                display: none;
+            }
+            .mobile{
+                display: block;
+            }
+            .brand img{
+                margin: 0;
+            }
+            .navbar .navbar-inner {
+               height: 0;
+            }
+        }
+        
+    
+        /* RESPONSIVE CSS
+        -------------------------------------------------- */
+        
+    
+        
+         @media (min-width: 1480px) {
+            
+            .carousel{
+                height: 420px !important;
+            }   
+             .carousel .item {
+          height: 420px !important;
+        }   
+             .carousel-caption {
+          margin-top: 240px !important;
+            }
+            .bs-docs-sidenav > li > a {
+                padding: 15px 14px !important
+            }
+            
+            .first-item{
+            background-image: url(../img/examples/slide-01-1480.jpg) !important;
+            
+          }
+          .second-item{
+            background-image: url(../img/examples/slide-02-1480.jpg) !important;
+          }
+          
+          .third-item{
+            background-image: url(../img/examples/slide-03-1480.jpg) !important;
+          }
+    
+          .fourth-item{
+            background-image: url(../img/examples/slide-05-1480.jpg) !important;
+          }
+          
+            
+        }
+        
+         @media (min-width: 1200px) {
+            .carousel-indicators {
+            top: -70px !important;
+            }
+            
+            .affix-bottom {
+                width: 270px !important;
+                position: absolute;
+                top: auto;
+            }
+            
+            .bs-docs-sidenav > li > a{
+                padding: 10px 14px;
+            }
+        }
+        
+         @media (max-width: 1200px) {
+            
+            .carousel{
+                height: 200px !important;
+            }   
+             .carousel .item {
+          height: 200px !important;
+        }   
+             .carousel-caption {
+          margin-top: 40px !important;
+            }
+        }
+        
+        
+        @media (max-width: 979px) {
+    
+          .container.navbar-wrapper {
+            margin-bottom: 0;
+            width: auto;
+          }
+          .navbar-inner {
+            border-radius: 0;
+            margin: 0;
+          }
+          
+          /*.carousel{
+            margin-top: 0 !important;
+          }*/
+          
+          .carousel .item {
+            height: 500px;
+          }
+    
+          .affix-bottom {
+           width: 167px !important;
+          }
+          
+        }
+        
+          @media (max-width: 979px) {
+             .carousel-caption {
+          width: 50%;
+          margin: 170px 0 70px 360px !important;
+          padding: 20px 0 !important;
+          float: none !important;
+          text-align: center;
+            }
+            
+            .red-box h1 {
+                font-size: 30px !important;
+                height: 35px !important;
+            }
+            
+            .carousel{
+                margin-top: 0 !important;
+            }
+            
+                .carousel .item {
+            height: 300px !important;
+            }
+            
+            .carousel-caption a{
+                text-align: center !important;
+                float: none !important;
+            }
+        }
+        
+         @media (max-width: 979px) {
+            .carousel-indicators {
+            top: -40px !important;
+            }
+            
+            .red-box{
+            height: 70px !important;
+          }
+            
+            .calendar a{
+            height: 40px !important;
+          }
+          
+          .first-item{
+            background-image: url(../img/examples/slide-01-mobile.jpg) !important;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover !important;
+          }
+          .second-item{
+            background-image: url(../img/examples/slide-02-mobile.jpg) !important;
+            background-position: center top;
+            background-repeat: no-repeat;
+           background-size: cover !important;
+          }
+          
+           .third-item{
+            background-image: url(../img/examples/slide-03-mobile.jpg) !important;
+            background-position: center top;
+            background-repeat: no-repeat;
+           background-size: cover !important;
+          }
+    
+          .fourth-item{
+            background-image: url(../img/examples/slide-05-mobile.jpg) !important;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover !important;
+          }
+          
+          
+          
+        }
+    
+        @media (max-width: 767px) {
+    
+          .navbar-inner {
+            margin: 0;
+          }
+          
+          .carousel-indicators {
+          position: relative;
+          z-index: 99;
+          margin: 0;
+          list-style: none;
+          }
+          
+    
+          .carousel {
+            margin-top: 100px !important;
+            margin-left: -20px;
+            margin-right: -20px;
+            height: 250px;
+          }
+          
+          .carousel .item {
+            height: 300px;
+          }
+          
+          .carousel-caption {
+            width: 50%;
+           margin: 160px 0 0 320px !important;
+            line-height: 25px !important;
+          }
+          
+          .carousel-caption h1 {
+           font-size: 30px !important;
+          }
+          .carousel-caption .lead,
+          .carousel-caption .btn {
+            font-size: 25px;
+          }
+          
+          .calendar{
+            margin-top: 0 !important;
+          }
+          
+          .countdown{
+            margin-bottom: 20px;
+          }
+          
+          .first-item{
+                background-size: auto 400px !important;
+            }
+            
+            .second-item{
+                background-size: auto 400px !important;
+            }
+            
+          }
+          
+          @media screen and (max-width: 480px){
+            
+          
+          .red-box{
+            height: 60px !important;
+          }
+          
+    
+          .carousel-caption{
+            margin: 160px auto !important;
+            width: 80% !important;
+          }
+          
+          .carousel-caption h1 {
+           font-size: 20px !important;
+           line-height: 19px !important;
+          }
+          
+          .carousel-caption .lead,
+          .carousel-caption .btn {
+            font-size: 22px;
+          }
+          
+            button{
+            top: -56px;
+            position: relative;
+          }
+          
+          .nav-collapse, .nav-collapse.collapse{
+            position: relative;
+            top: -39px;
+          }
+          
+          .navbar-inverse .nav-collapse .nav > li > a, .navbar-inverse .nav-collapse .dropdown-menu a {
+            text-align: center;
+          }
+          
+          .bs-docs-sidenav {
+            width: 80%;
+          }
+          
+        }
+    
+    /*----------ESTILOS HTML--------*/
+    
+    /*----------ESTILOS IE--------*/
+    
+       .ie7 .carousel-caption{
+            width: 60% !important;
+        }
+        
+        .ie7  .affix{
+             margin-left: -130px;
+        }
+        
+        .ie7  .affix-bottom{
+             margin-left: -130px;
+        }
+    
+        /* CUSTOMIZE THE CAROUSEL
+        -------------------------------------------------- */
+    
+        /* Carousel base class */
+        .carousel {
+          margin-bottom: 40px;
+          margin-top: 30px;
+          height: 250px;
+        }
+    
+        .carousel .container {
+          position: relative;
+          z-index: 9;
+        }
+    
+        .carousel-control {
+          height: 80px;
+          margin-top: 0;
+          font-size: 120px;
+          text-shadow: 0 1px 1px rgba(0,0,0,.4);
+          background-color: transparent;
+          border: 0;
+          z-index: 10;
+        }
+    
+        .carousel .item {
+          height: 250px;
+        }
+        
+        .first-item{
+            background-image: url(../img/examples/slide-01.jpg);
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        .second-item{
+            background-image: url(../img/examples/slide-02.jpg);
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        .third-item{
+            background-image: url(../img/examples/slide-03.jpg);
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        .fourth-item{
+            background-image: url(../img/examples/slide-05.jpg);
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        .carousel-caption {
+          background-color: transparent;
+          position: static;
+          padding: 0 20px;
+          margin-top: 70px;
+          margin-right: 40px;
+          float: right;
+        }
+        
+        .carousel-caption h1,
+        .carousel-caption .lead {
+          margin: 0;
+          line-height: 1.25;
+          color: #fff;
+        }
+        .carousel-caption .btn {
+          margin-top: 10px;
+        }
+    
+    /*----------ESTILOS CAROUSEL--------*/
+    
+    .red-box{
+    background: -moz-linear-gradient(left,  rgba(204,0,0,0.8) 0%, rgba(142,4,10,0.8) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(204,0,0,0.8)), color-stop(100%,rgba(142,4,10,0.8))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(204,0,0,0.8) 0%,rgba(142,4,10,0.8) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(204,0,0,0.8) 0%,rgba(142,4,10,0.8) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(204,0,0,0.8) 0%,rgba(142,4,10,0.8) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(204,0,0,0.8) 0%,rgba(142,4,10,0.8) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccc0000', endColorstr='#cc8e040a',GradientType=1 ); /* IE6-9 */
+    height: 130px;
+    }
+    
+    .red-box h1{
+        font-family: 'proxima_novalight';
+        font-size: 38px;
+        height: 50px;
+        font-weight: normal;
+        color: #FFF;
+    }
+    
+    .red-box p{
+        font-family: 'proxima_novalight';
+        font-size: 30px;    
+        font-weight: normal;
+    }
+    .red-box a{
+        color: #FFF;
+        font-size: 20px;
+        float: right;
+        padding-bottom: 20px;
+    }
+    
+    @media (max-width: 767px){
+        
+        .carousel-indicators li {
+          display: block;
+          float: left;
+          width: 15px;
+          height: 15px;
+          border: none;
+          margin-left: 10px;
+          text-indent: -999px;
+          background-color: #5f789f;
+          border-radius: 10px;
+          padding: 0;
+        }
+        
+        .carousel-indicators span{
+            display: none;
+        }
+        
+    }
+    
+        /*--------Estilos Side Nav------*/
+    
+    .bs-docs-sidenav > li{
+        background-color: #eceeef;
+    }
+    
+    .bs-docs-sidenav > li .active{
+        background-color: #d52027;
+        color: #FFF;
+    }
+    
+        /* SIDE NAV
+        -------------------------------------------------- */
+        
+       /* .sidebar-nav{
+            text-align: center;
+        }*/
+          
+        .sidebar-nav ul li a{
+            line-height: 15px;
+            color: #666666;
+        }
+        
+        .register{
+            background-color: #cc0000 !important;
+        }
+        
+        .register a:hover{
+            background-color: #a1aaaf !important;
+        }
+        
+        .register a{
+            color: #FFF !important;
+            text-shadow: none !important;
+        }
+        
+        /*.sidebar-nav ul li:nth-child(8){
+            background-color: #cc0000;
+        }
+        
+        .sidebar-nav ul li:nth-child(8) a:hover{
+            background-color: #a1aaaf;
+        }
+        
+        .sidebar-nav ul li:nth-child(8) a{
+            color: #FFF;
+            text-shadow: none;
+        }*/
+        
+        .calendar{
+            /*margin-top: 50px;*/
+            background-color: #a1aaaf !important;    
+        }
+        
+        .calendar a{
+            color: #FFF !important;
+           text-shadow: none !important; 
+        }
+        
+        .calendar a:hover{
+          text-decoration: underline;
+          background-color: #a1aaaf !important;  
+        }
+        
+        /*.sidebar-nav ul li:nth-child(9) {
+            margin-top: 40px;
+            background-color: #a1aaaf;    
+        }
+        
+        .sidebar-nav ul li:nth-child(9) a {
+           color: #FFF;
+           text-shadow: none;   
+        }
+        
+        .sidebar-nav ul li:nth-child(9) a:hover {
+            text-decoration: underline;
+          background-color: #a1aaaf;
+        }*/
+        
+        .days{
+           background-color: #d9dddf !important;
+            color: #666666 !important;
+            padding: 5px 0;
+            text-align: center;
+        }
+        
+       /*  .sidebar-nav ul li:nth-child(10) {
+            background-color: #d9dddf;
+            color: #a1aaaf;
+            padding: 5px 0;
+        }*/
+        
+        .affix{
+             position: fixed;
+             top: 110px;  //height of the nav
+        }
+        
+        
+        .affix-top {
+            
+        }
+        
+        
+        /* COUNTDOWN
+        -------------------------------------------------- */
+        
+        .countdown{
+           padding: 10px 0;
+           text-align: center;
+        }
+        
+        #dias{
+            font-size: 20px;
+            color: #cc0000;
+        }
+        
+        #tiempo{
+            font-size: 20px;
+            color: #cc0000;
+        }
+    
+    /*--------VIDEO WRAPPER------*/
+    
+    .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+    }
+    .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+    }
+    
+    
+    /*--------Info------*/
+    
+    .cuadro-gris{
+        background-color: #efefef;
+        padding: 15px;
+    }
+    
+    .cuadro-gris li{
+        padding: 10px 0;
+    }
+    
+    .cuadro-negro{
+        background-color: #a1aaaf;
+        padding: 15px;
+        color: #FFF;
+    }
+    
+    .cuadro-negro a:link, .cuadro-negro a:visited{
+        color: #FFF;
+    }
+    
+    .cuadro-negro a:hover{
+        color: #EEE;
+    }
+    
+    .quotes li{
+        font-size: 16px;
+        padding: 14px 0;
+        font-weight: 100;
+    }
+    
+    .quotes{
+        list-style: url(../img/bubbletext.png);
+    }
+    
+    /*----------ESTILOS WORLDMAP---------*/
+    .worldmap{
+        background: no-repeat center top;
+        background-image: url(../img/worldmap.png);
+        height: 350px;
+    }
+    .spain, .singapore{
+        position: relative;
+    }
+    .spain a, .singapore a{
+        color: #111;
+    }
+    
+    .maps-phone{
+        text-align: center;
+    }
+    
+      @media (min-width: 1200px) {
+        .spain{
+            margin-left: 394px;
+            top: 98px;
+        }
+        .singapore{
+            top: 145px;
+            margin-left: 603px;
+        }
+    }
+    
+      @media (max-width: 1199px) {
+        .spain{
+            margin-left: 310px;
+            top: 97px;
+        }
+         .singapore{
+            top: 145px;
+            margin-left: 518px;
+        }
+      }
+        
+  /*       @media (max-width: 979px) {
+        .worldmap{
+        background-image: url(../img/worldmap-s.png) !important;
+        }
+        
+        .spain{
+            left: 241px;
+            top: 69px;
+        }
+         .singapore{
+            top: 145px;
+            left: 603px;
+        }
+    }*/
+    
+    
+    /*----------ESTILOS SPEAKERS---------*/
+    
+    .speakers{
+        width: 100%;
+    }
+    
+    /*----------ESTILOS AGENDA---------*/
+    
+    
+    .agenda-date{
+        background-color: #cc0000;
+        font-size: 16px;
+        color: #FFF;
+        margin-top: 20px;
+        padding: 10px 0;
+        text-align: center;
+        -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+        -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+        box-shadow: 0 1px 4px rgba(0,0,0,.065);
+    }
+    
+    .agenda-title{
+        background-color: #a1aaaf;
+        color: #FFFFFF;
+        padding: 5px 0 0 0;
+        text-align: center;
+        -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+        -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+        box-shadow: 0 1px 4px rgba(0,0,0,.065);
+    }
+    
+    .agenda-title .span8{
+        text-align: left;
+    }
+    
+    
+    .agenda-subtitle{
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .agenda-claro{
+        padding: 5px 0 0 0;
+        background-color: #fbfbfb;
+        line-height: 15px;
+        text-align: center;
+        color: #333333;
+        -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+        -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+        box-shadow: 0 1px 4px rgba(0,0,0,.065);
+       font-size: 14px;
+    }
+    
+    .agenda-claro .span8{
+        text-align: left;
+    }
+    
+    
+    .agenda-oscuro{
+        padding: 5px 0 0 0;
+        background-color: #d9dddf;
+        line-height: 15px;
+        text-align: center;
+        color: #333333;
+        -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+        -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+        box-shadow: 0 1px 4px rgba(0,0,0,.065);
+        font-size: 14px;
+    }
+    
+    .agenda-oscuro .span8{
+        text-align: left;
+    }
+    
+    .download {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .download a{
+        background-color: #CC0000;
+        color: #FFF;
+        padding: 10px;
+    }
+    
+    .download a:hover{
+        text-decoration: none;
+        background-color: #b21412;
+    }
+    
+    
+    @media (max-width: 767px){
+        .agenda-claro div{
+            margin: 0 !important;
+            }
+        .agenda-oscuro div{
+            margin: 0 !important;
+            }  
+    }
+    
+    .table th, .table td{
+        padding: 0 0 0 15px !important;
+    }
+    
+    /*----------ESTILOS SPONSORS---------*/
+    
+    .sponsors{
+        background-color: #d8dcdd;
+        margin-top: 40px;
+        height: 200px;
+    }
+    
+    .bg-avnet{
+        background-image: url("../img/avnet.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .texto-avnet{
+        display: none;
+    }
+    
+    /*--------ESTILOS THANKS------*/
+    
+    .red-box-thanks{
+    background: -moz-linear-gradient(left,  rgba(204,0,0,0.8) 0%, rgba(142,4,10,0.8) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(204,0,0,0.8)), color-stop(100%,rgba(142,4,10,0.8))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(204,0,0,0.8) 0%,rgba(142,4,10,0.8) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(204,0,0,0.8) 0%,rgba(142,4,10,0.8) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(204,0,0,0.8) 0%,rgba(142,4,10,0.8) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(204,0,0,0.8) 0%,rgba(142,4,10,0.8) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccc0000', endColorstr='#cc8e040a',GradientType=1 ); /* IE6-9 */
+    height: 40px;
+    margin: 348px 0 0 15px;
+    padding: 15px 15px;
+    width: 240px;
+    float: left;    
+    }
+    
+    .red-box-thanks h5{
+        font-family: 'proxima_novalight';
+        font-size: 30px;
+        font-weight: normal;
+        color: #FFF;
+        text-align: center;
+    }
+    
+    .red-box-thanks a{
+        color: #FFF;
+    }
+    
+    /*.thanks{
+        background-image: url(../img/examples/inner/bg_thanks.jpg);
+        background-position: center top;
+        height: 280px;
+    }*/
+    
+    @media (min-width: 1200px){
+        .red-box-thanks h1{
+        font-size: 60px;
+        }
+    }
+    
+    @media (max-width: 979px){
+        .red-box-inner h1{
+            font-size: 50px;
+        }
+        .red-box-inner p{
+            font-size: 25px;
+        }
+        
+        .red-box-thanks h1{
+            font-size: 35px;
+            line-height: 30px;
+        }
+        
+    }
+    
+    
+    @media (max-width: 480px){
+        .red-box-thanks{
+            margin: 100px 40px 0 40px;
+        }
+        
+        .red-box-thanks h1{
+            font-size: 25px;
+            line-height: 25px;
+        }
+        
+        .privacy{
+            padding: 0 !important;
+        }
+        
+    }
+    
+    /*--------THANKS FOR REGISTER------*/
+    
+    
+    .thanks-bg{
+        background-image: url(../img/thanks-reg.png);
+        height: 460px;
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 710px auto;
+    }
+    
+    .thanks h2{
+        text-align: left;
+        color: #CC0000;
+        font-size: 47px;
+        line-height: 44px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .thanks h4{
+        text-align: left;
+        font-size: 20px;
+        line-height: 23px;
+        color: #666;
+    }
+    
+    .calendar-thanks{
+        height: 48px;
+        background-image: url(../img/calendar-thanks.png);
+        background-repeat: no-repeat;
+        text-align: left;
+        padding: 8px 0 0 65px;
+        font-size: 16px;
+        margin: 20px 0 0 0;
+    }
+    
+    .calendar-thanks a{
+        font-size: 20px;
+    }
+    
+    @media (max-width: 769px){
+        .thanks h2{
+            margin-top: 20px !important;
+        }
+    }
+    
+    @media (max-width: 480px){
+      .thanks-bg{
+        background-position: center;
+        height: 250px;
+        }
+    }
+    
+    
+    .thanks-bg2{
+        background-image: url(../img/thanks-reg2.png);
+        height: 410px;
+    }
+    
+    .thanks2 h2{
+        color: #FFF;
+        text-align: left;
+        padding: 10px 0 0 20px;
+    }
+    
+    .thanks2 h4{
+        color: #FFF;
+        text-align: left;
+        padding: 35px 15px 0 20px;
+        font-size: 18px
+    }
+    
+    .thanks2 p a{
+        color: #FFF;
+        text-align: left;
+        padding: 35px 15px 0 20px;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+    
+    .calendar-thanks2{
+        height: 48px;
+        color: #FFF;
+        background-image: url(../img/calendar-thanks.png);
+        background-repeat: no-repeat;
+        text-align: left;
+        padding: 8px 0 0 65px;
+        font-size: 16px;
+        margin: 50px 0 0 20px;
+    }
+    
+    .calendar-thanks2 a{
+        font-size: 20px;
+        color: #FFF;
+    }
+    
+    @media (max-width: 980px){
+        .thanks-bg2{
+            background-image: url(../img/thanks-reg2-mobile.png);
+            height: 290px;
+        }
+    }
+    
+    /*----------ESTILOS SOCIAL MEDIA---------*/
+    
+    .social-media{
+        background-color: #404040;    
+    }
+    
+    .social-media p{
+        color: #FFF;
+        float: left;
+    }
+    
+    .hashtag{
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    .social-media img{
+        padding: 0 6px 0 0;
+    }
+    
+    @media (max-width: 767px){
+        .social-media img{
+         padding: 0;    
+        }
+    }
+    
+    /*----------ESTILOS FOOTER---------*/
+    
+       .footer a:link, .footer a:visited{
+            color: #FFF;
+        }
+        
+        
+        .footer a:hover{
+           color: #EEE;
+        }
+    
+    
+    @media (max-width: 767px){
+        .info{
+            padding: 10px 0;
+        }
+        
+    }
+    
+    /*----------ESTILOS AUDIOPLAYER---------*/
+    
+    @media (min-width: 767px){
+        .audioplayer{
+            width: 60% !important;
+        }
+    }
+    
+    .audioplayer{
+        height: 2.5em; /* 40 */
+        color: #fff;
+        text-shadow: 1px 1px 0 #000;
+        border: 1px solid #222;
+        position: relative;
+        z-index: 1;
+        background: #333;
+        width: 90%;
+        /*margin: 0 auto;*/
+        }
+    
+    /* mini mode (fallback) */
+    
+    .audioplayer-mini{
+        width: 2.5em; /* 40 */
+        margin: 0 auto;
+        }
+    
+    
+    /* player elements: play/pause and volume buttons, played/duration timers, progress bar of loaded/played */
+    
+    .audioplayer > div{
+        position: absolute;
+        }
+    
+    
+    /* play/pause button */
+    
+    .audioplayer-playpause{
+        width: 2.5em; /* 40 */
+        height: 100%;
+        text-align: left;
+        text-indent: -9999px;
+        cursor: pointer;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        }
+        
+    .audioplayer:not(.audioplayer-mini) .audioplayer-playpause{
+        border-right: 1px solid #555;
+        border-right-color: rgba( 255, 255, 255, .1 );
+        }
+        
+    .audioplayer-mini .audioplayer-playpause{
+        width: 100%;
+        }
+                                    .audioplayer-playpause:hover,
+                                    .audioplayer-playpause:focus
+                                    {
+                                            background-color: #222;
+                                    }
+                                    .audioplayer-playpause a
+                                    {
+                                            display: block;
+                                    }
+                                    .audioplayer-stopped .audioplayer-playpause a
+                                    {
+                                            width: 0;
+                                            height: 0;
+                                            border: 0.5em solid transparent; /* 8 */
+                                            border-right: none;
+                                            border-left-color: #fff;
+                                            content: '';
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            margin: -0.5em 0 0 -0.25em; /* 8 4 */
+                                    }
+                                    .audioplayer-playing .audioplayer-playpause a
+                                    {
+                                            width: 0.75em; /* 12 */
+                                            height: 0.75em; /* 12 */
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            margin: -0.375em 0 0 -0.375em; /* 6 */
+                                    }
+                                            .audioplayer-playing .audioplayer-playpause a:before,
+                                            .audioplayer-playing .audioplayer-playpause a:after
+                                            {
+                                                    width: 40%;
+                                                    height: 100%;
+                                                    background-color: #fff;
+                                                    content: '';
+                                                    position: absolute;
+                                                    top: 0;
+                                            }
+                                            .audioplayer-playing .audioplayer-playpause a:before
+                                            {
+                                                    left: 0;
+                                            }
+                                            .audioplayer-playing .audioplayer-playpause a:after
+                                            {
+                                                    right: 0;
+                                            }
+    
+    
+                            /* timers */
+    
+                            .audioplayer-time
+                            {
+                                    width: 4.375em; /* 70 */
+                                    height: 100%;
+                                    line-height: 2.375em; /* 38 */
+                                    text-align: center;
+                                    z-index: 2;
+                                    top: 0;
+                            }
+                                    .audioplayer-time-current
+                                    {
+                                            border-left: 1px solid #111;
+                                            border-left-color: rgba( 0, 0, 0, .25 );
+                                            left: 2.5em; /* 40 */
+                                    }
+                                    .audioplayer-time-duration
+                                    {
+                                            border-right: 1px solid #555;
+                                            border-right-color: rgba( 255, 255, 255, .1 );
+                                            right: 2.5em; /* 40 */
+                                    }
+                                            .audioplayer-novolume .audioplayer-time-duration
+                                            {
+                                                    border-right: 0;
+                                                    right: 0;
+                                            }
+    
+    
+                            /* progress bar of loaded/played */
+    
+                            .audioplayer-bar
+                            {
+                                    height: 0.875em; /* 14 */
+                                    background-color: #222;
+                                    cursor: pointer;
+                                    z-index: 1;
+                                    top: 50%;
+                                    right: 6.875em; /* 110 */
+                                    left: 6.875em; /* 110 */
+                                    margin-top: -0.438em; /* 7 */
+                            }
+                                    .audioplayer-novolume .audioplayer-bar
+                                    {
+                                            right: 4.375em; /* 70 */
+                                    }
+                                    .audioplayer-bar div
+                                    {
+                                            width: 0;
+                                            height: 100%;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                    }
+                                    .audioplayer-bar-loaded
+                                    {
+                                            background-color: #333;
+                                            z-index: 1;
+                                    }
+                                    .audioplayer-bar-played
+                                    {
+                                            background: #007fd1;
+                                            z-index: 2;
+                                    }
+    
+    
+                            /* volume button */
+    
+                            .audioplayer-volume
+                            {
+                                    width: 2.5em; /* 40 */
+                                    height: 100%;
+                                    border-left: 1px solid #111;
+                                    border-left-color: rgba( 0, 0, 0, .25 );
+                                    text-align: left;
+                                    text-indent: -9999px;
+                                    cursor: pointer;
+                                    z-index: 2;
+                                    top: 0;
+                                    right: 0;
+                            }
+                                    .audioplayer-volume:hover,
+                                    .audioplayer-volume:focus
+                                    {
+                                            background-color: #222;
+                                    }
+                                    .audioplayer-volume-button
+                                    {
+                                            width: 100%;
+                                            height: 100%;
+                                    }
+                                            .audioplayer-volume-button a
+                                            {
+                                                    width: 0.313em; /* 5 */
+                                                    height: 0.375em; /* 6 */
+                                                    background-color: #fff;
+                                                    display: block;
+                                                    position: relative;
+                                                    z-index: 1;
+                                                    top: 40%;
+                                                    left: 35%;
+                                            }
+                                                    .audioplayer-volume-button a:before,
+                                                    .audioplayer-volume-button a:after
+                                                    {
+                                                            content: '';
+                                                            position: absolute;
+                                                    }
+                                                    .audioplayer-volume-button a:before
+                                                    {
+                                                            width: 0;
+                                                            height: 0;
+                                                            border: 0.5em solid transparent; /* 8 */
+                                                            border-left: none;
+                                                            border-right-color: #fff;
+                                                            z-index: 2;
+                                                            top: 50%;
+                                                            right: -0.25em;
+                                                            margin-top: -0.5em; /* 8 */
+                                                    }
+                                                    .audioplayer:not(.audioplayer-muted) .audioplayer-volume-button a:after
+                                                    {
+                                                            /* "volume" icon by Nicolas Gallagher, http://nicolasgallagher.com/pure-css-gui-icons */
+                                                            width: 0.313em; /* 5 */
+                                                            height: 0.313em; /* 5 */
+                                                            border: 0.25em double #fff; /* 4 */
+                                                            border-width: 0.25em 0.25em 0 0; /* 4 */
+                                                            left: 0.563em; /* 9 */
+                                                            top: -0.063em; /* 1 */
+                                                            -webkit-border-radius: 0 0.938em 0 0; /* 15 */
+                                                            -moz-border-radius: 0 0.938em 0 0; /* 15 */
+                                                            border-radius: 0 0.938em 0 0; /* 15 */
+                                                            -webkit-transform: rotate( 45deg );
+                                                            -moz-transform: rotate( 45deg );
+                                                            -ms-transform: rotate( 45deg );
+                                                            -o-transform: rotate( 45deg );
+                                                            transform: rotate( 45deg );
+                                                    }
+    
+    
+                                    /* volume dropdown */
+    
+                                    .audioplayer-volume-adjust
+                                    {
+                                            height: 6.25em; /* 100 */
+                                            cursor: default;
+                                            position: absolute;
+                                            left: 0;
+                                            right: -1px;
+                                            top: -9999px;
+                                            background: #333;
+                                    }
+                                            .audioplayer-volume:not(:hover) .audioplayer-volume-adjust
+                                            {
+                                                    opacity: 0;
+                                            }
+                                            .audioplayer-volume:hover .audioplayer-volume-adjust
+                                            {
+                                                    top: auto;
+                                                    bottom: 100%;
+                                            }
+                                            .audioplayer-volume-adjust > div
+                                            {
+                                                    width: 40%;
+                                                    height: 80%;
+                                                    background-color: #222;
+                                                    cursor: pointer;
+                                                    position: relative;
+                                                    z-index: 1;
+                                                    margin: 30% auto 0;
+                                            }
+                                                    .audioplayer-volume-adjust div div
+                                                    {
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            position: absolute;
+                                                            bottom: 0;
+                                                            left: 0;
+                                                            background: #007fd1;
+                                                    }
+                                    .audioplayer-novolume .audioplayer-volume
+                                    {
+                                            display: none;
+                                    }
+    
+    /*ESTILOS AUDIOPLAYER CSS3*/
+    
+    .audioplayer
+                            {
+                                    -webkit-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
+                                    -moz-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
+                                    box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
+                            }
+                            .audioplayer-volume-adjust
+                            {
+                                    -webkit-box-shadow: -2px -2px 2px rgba( 0, 0, 0, .15 ), 2px -2px 2px rgba( 0, 0, 0, .15 );
+                                    -moz-box-shadow: -2px -2px 2px rgba( 0, 0, 0, .15 ), 2px -2px 2px rgba( 0, 0, 0, .15 );
+                                    box-shadow: -2px -2px 2px rgba( 0, 0, 0, .15 ), 2px -2px 2px rgba( 0, 0, 0, .15 );
+                            }
+                            .audioplayer-bar,
+                            .audioplayer-volume-adjust > div
+                            {
+                                    -webkit-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+                                    -moz-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+                                    box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+                            }
+                            .audioplayer-volume-adjust div div,
+                            .audioplayer-bar-played
+                            {
+                                    -webkit-box-shadow: inset 0 0 5px rgba( 255, 255, 255, .5 );
+                                    -moz-box-shadow: inset 0 0 5px rgba( 255, 255, 255, .5 );
+                                    box-shadow: inset 0 0 5px rgba( 255, 255, 255, .5 );
+                            }
+                            .audioplayer-playpause,
+                            .audioplayer-volume a
+                            {
+                                    -webkit-filter: drop-shadow( 1px 1px 0 #000 );
+                                    -moz-filter: drop-shadow( 1px 1px 0 #000 );
+                                    -ms-filter: drop-shadow( 1px 1px 0 #000 );
+                                    -o-filter: drop-shadow( 1px 1px 0 #000 );
+                                    filter: drop-shadow( 1px 1px 0 #000 );
+                            }
+                            .audioplayer,
+                            .audioplayer-volume-adjust
+                            {
+                                    background: -webkit-gradient( linear, left top, left bottom, from( #444 ), to( #222 ) );
+                                    background: -webkit-linear-gradient( top, #444, #222 );
+                                    background: -moz-linear-gradient( top, #444, #222 );
+                                    background: -ms-radial-gradient( top, #444, #222 );
+                                    background: -o-linear-gradient( top, #444, #222 );
+                                    background: linear-gradient( to bottom, #444, #222 );
+                            }
+                            .audioplayer-bar-played
+                            {
+                                    background: #ff1a00; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ff1a00 0%, #cc0000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff1a00), color-stop(100%,#cc0000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #ff1a00 0%,#cc0000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #ff1a00 0%,#cc0000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #ff1a00 0%,#cc0000 100%); /* IE10+ */
+    background: linear-gradient(to right,  #ff1a00 0%,#cc0000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', endColorstr='#cc0000',GradientType=1 ); /* IE6-9 */
+    
+                            }
+                            .audioplayer-volume-adjust div div
+                            {
+                                    background: #ff1a00; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff1a00 0%, #cc0000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff1a00), color-stop(100%,#cc0000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ff1a00 0%,#cc0000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ff1a00 0%,#cc0000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ff1a00 0%,#cc0000 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ff1a00 0%,#cc0000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', endColorstr='#cc0000',GradientType=0 ); /* IE6-9 */
+    
+                            }
+                            .audioplayer-bar,
+                            .audioplayer-bar div,
+                            .audioplayer-volume-adjust div
+                            {
+                                    -webkit-border-radius: 4px;
+                                    -moz-border-radius: 4px;
+                                    border-radius: 4px;
+                            }
+                            .audioplayer
+                            {
+                                    -webkit-border-radius: 2px;
+                                    -moz-border-radius: 2px;
+                                    border-radius: 2px;
+                                    margin-top: 30px;
+                                    margin-bottom: 30px;
+                            }
+                            .audioplayer-volume-adjust
+                            {
+                                    -webkit-border-top-left-radius: 2px;
+                                    -webkit-border-top-right-radius: 2px;
+                                    -moz-border-radius-topleft: 2px;
+                                    -moz-border-radius-topright: 2px;
+                                    border-top-left-radius: 2px;
+                                    border-top-right-radius: 2px;
+                            }
+                            .audioplayer *,
+                            .audioplayer *:before,
+                            .audioplayer *:after
+                            {
+                                    -webkit-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+                                    -moz-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+                                    -ms-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+                                    -o-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+                                    transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+                            }

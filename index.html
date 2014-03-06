@@ -18,10 +18,9 @@
         // From: http://www.webdeveloper.com/forum/showthread.php?266743-Switch-Div-Content-Using-Javascript&p=1229155#post1229155
 
         function showDiv(idInfo) {
-            //var contenido = $("#container" + idInfo).html();
-            //$("#divLinks").html(contenido);
-
-            var sel = document.getElementById('divLinks').getElementsByTagName('div');
+		    
+			var sel = document.getElementById('divLinks').getElementsByTagName('div');
+			
             for (var i = 0; i < sel.length; i++) {
                 sel[i].style.display = 'none';
             }
@@ -425,14 +424,6 @@
 
 				</div>
 
-
-
-
-
-
-
-
-
 				<div class="span3">
 					<div class="buttonbox">
 						<div class="tittlebox">
@@ -545,21 +536,6 @@
     </div>
 
 	<div id="voice" class="container" style="display:none;">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		<div class="row-fluid">
 		<div class="container">
@@ -581,7 +557,7 @@
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('17');return false">Referal</a>
+							<a href="#" onclick="showDiv('16');return false">Referal</a>
 						</div>
 					</div>
 				</div>
@@ -592,7 +568,7 @@
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('18');return false">Current Customer Reference</a>
+							<a href="#" onclick="showDiv('16');return false">Current Customer Reference</a>
 						</div>
 					</div>
 				</div>
@@ -612,7 +588,7 @@
 	
 				<div class="span12 showcontent">
 					
-					<div id="divLinks">
+					<div id="divLinks2">
 
 
 						 <div id="container16">

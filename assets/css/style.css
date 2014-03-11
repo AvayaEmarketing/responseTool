@@ -170,7 +170,7 @@ body,.zero{
 }
 
 .navswitch{
-    width: 600px;
+    width: 700px;
     height: 50px;
     margin: 0 auto;
     background: #333;
@@ -193,7 +193,7 @@ body,.zero{
 
 .navswitch ul li{
     float: left;
-    width: 25%;
+    width: 20%;
 
 }
 .navswitch ul li a{

@@ -40,7 +40,7 @@
 			var sel2 = document.getElementById('divLinks2').getElementsByTagName('div');//numero de contenedores para el menu Voicemail
 			var sel3 = document.getElementById('divLinks3').getElementsByTagName('div');
 			var sel4 = document.getElementById('divLinks4').getElementsByTagName('div');
-			//var sel5 = document.getElementById('divLinks5').getElementsByTagName('div');
+			var sel5 = document.getElementById('divLinks5').getElementsByTagName('div');
 
 			
 				//cilco que permite ocultar todos los elementos del menu Objections
@@ -58,9 +58,9 @@
 				for (var i = 0; i < sel4.length; i++) {
 					sel4[i].style.display = 'none';
                 }
-				/*for (var i = 0; i < sel5.length; i++) {
+				for (var i = 0; i < sel5.length; i++) {
 					sel5[i].style.display = 'none';
-                }*/
+                }
                 
 				/*
 				idInfo: parametro que permite identificar el ID de un container en particular
@@ -102,7 +102,7 @@
 				$("#voice").css("display", "none");
             });
             
-            $("#campaigns").click(function () {
+            $("#general").click(function () {
                 $("#camp").css("display", "block");
                 $("#objections").css("display", "none");
                 $("#sales").css("display", "none");
@@ -143,7 +143,7 @@
 					    <li><a href="#" id="object">Objections</a></li>
 						<li><a href="#" id="voicemail">Voicemail</a></li>
 						<li><a href="#" id="salestechnique">Sales Technique</a></li>
-						<li><a href="#" id="salestechnique">General Script</a></li>
+						<li><a href="#" id="general">General Script</a></li>
 						<li><a href="#" id="campaigns">Campaigns</a></li>
 					</ul>
 					
@@ -853,34 +853,34 @@
 		<div class="container">
 			<div class="span12">
 				<div class="span4">
-					<div class="buttonbox" id="22">
+					<div class="buttonbox" id="26">
 						<div class="tittlebox">
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('16');return false">Former Sales Rep Reference</a>
+							<a href="#" onclick="showDiv('25');return false">Former Sales Rep Reference</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox" id="23">
+					<div class="buttonbox" id="27">
 						<div class="tittlebox">
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('16');return false">Referal</a>
+							<a href="#" onclick="showDiv('26');return false">Referal</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox" id="24">
+					<div class="buttonbox" id="28">
 						<div class="tittlebox">
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('16');return false">Current Customer Reference</a>
+							<a href="#" onclick="showDiv('27');return false">Current Customer Reference</a>
 						</div>
 					</div>
 				</div>
@@ -903,7 +903,7 @@
 					<div id="divLinks4">
 
 
-						 <div id="container22">
+						 <div id="container26">
 							Hi _________________, <br>
 							this is _______________ calling from ______________ <br>
 							I'm calling about _________________. <br>
@@ -911,7 +911,7 @@
 							Thanks!
 						 </div>
 
-						 <div id="container23">
+						 <div id="container27">
 							Hi _________________, <br>
 							this is _______________ calling from ______________ <br>
 							_________________ asked me to give you a call. <br>
@@ -919,7 +919,95 @@
 							Thanks!
 						 </div>
 
-						 <div id="container24">
+						 <div id="container28">
+							Hi _________________, <br>
+							this is _______________ calling from ______________ <br>
+							I'm calling about _________________. <br>
+							Will you please return my call al _______________? <br><br>
+							Thanks!
+						 </div>
+
+						 
+							
+					</div>
+
+				</div>
+    </div>
+	
+	<!-- contenido para General Script -->
+	
+	<div id="camp" class="container" style="display:none;">
+        <div class="row-fluid">
+		<div class="container">
+			<div class="span12">
+				<div class="span4">
+					<div class="buttonbox" id="29">
+						<div class="tittlebox">
+							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
+						</div>
+						<div class="textbox">
+							<a href="#" onclick="showDiv('25');return false">Former Sales Rep Reference</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="buttonbox" id="30">
+						<div class="tittlebox">
+							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
+						</div>
+						<div class="textbox">
+							<a href="#" onclick="showDiv('26');return false">Referal</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="buttonbox" id="31">
+						<div class="tittlebox">
+							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
+						</div>
+						<div class="textbox">
+							<a href="#" onclick="showDiv('27');return false">Current Customer Reference</a>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+<div class="sep"></div>
+
+
+	
+				<div class="span12 showcontent">
+					
+					<div id="divLinks5">
+
+
+						 <div id="container29">
+							Hi _________________, <br>
+							this is _______________ calling from ______________ <br>
+							I'm calling about _________________. <br>
+							Will you please return my call al _______________? <br><br>
+							Thanks!
+						 </div>
+
+						 <div id="container30">
+							Hi _________________, <br>
+							this is _______________ calling from ______________ <br>
+							_________________ asked me to give you a call. <br>
+							Will you please return my call al _______________? <br><br>
+							Thanks!
+						 </div>
+
+						 <div id="container31">
 							Hi _________________, <br>
 							this is _______________ calling from ______________ <br>
 							I'm calling about _________________. <br>

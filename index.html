@@ -17,7 +17,9 @@
     <script type="text/javascript">
         // From: http://www.webdeveloper.com/forum/showthread.php?266743-Switch-Div-Content-Using-Javascript&p=1229155#post1229155
 
-        function showDiv(idInfo) {
+        
+        //var idInfo;
+        /*function showDiv(idInfo) {
 		    
 			var sel = document.getElementById('divLinks').getElementsByTagName('div');
 			
@@ -25,7 +27,9 @@
                 sel[i].style.display = 'none';
             }
             document.getElementById('container' + idInfo).style.display = 'block';
-        }
+        }*/
+
+        
 
         function validaSession() {
             $.prettyLoader();
@@ -45,6 +49,15 @@
         }
 
         $(document).ready(function () {
+            var sel = document.getElementById('divLinks').getElementsByTagName('div');
+            $('body').on('click', ".buttonbox", function () {
+                for (var i = 0; i < sel.length; i++) {
+                    sel[i].style.display = 'none';
+                }
+                
+                idInfo = parseInt($(this).attr('id'));
+                $("#container" + idInfo).css({"display": "block"});
+            });
 
             validaSession();
 
@@ -128,34 +141,34 @@
 	<div class="row-fluid">
 		<div class="container">
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="1">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon1.png" alt=""></div>THE AHA FORMULA
+							<i class="fa fa-comments fa-lg"></i> THE AHA FORMULA
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('1');return false"><div>Overcoming Common Objetives</div></a>
+							<a href="#" onclick="idInfo='1';return false"><div>Overcoming Common Objetives</div></a>
 						</div>
 					</div>
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="2">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon2.png" alt=""></div> OPENING SCRIPT
+							<i class="fa fa-comments fa-lg"></i> OPENING SCRIPT
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('2');return false">Allow me to introduce myself</a>
+							<a href="#" onclick="idInfo='2';return false">Allow me to introduce myself</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="3">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon3.png" alt=""></div> APPOINMENT/OPPORTUNITY
+							<i class="fa fa-comments fa-lg"></i> APPOINMENT/OPPORTUNITY
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('3');return false">Why don't we just get together?</a>
+							<a href="#" onclick="idInfo='3';return false">Why don't we just get together?</a>
 						</div>
 					</div>
 				</div>
@@ -176,34 +189,34 @@
 		<div class="container">
 			<div class="span12">
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="4">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon4.png" alt=""></div> OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('4');return false">We're all set</a>
+							<a href="#" onclick="idInfo='4';return false">We're all set</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="5">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon5.png" alt=""></div> OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('5');return false">Any objection or question</a>
+							<a href="#" onclick="idInfo='5';return false">Any objection or question</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="6">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon6.png" alt=""></div> OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('6');return false">It's not in our budget right now</a>
+							<a href="#" onclick="idInfo='6';return false">It's not in our budget right now</a>
 						</div>
 					</div>
 				</div>
@@ -224,12 +237,12 @@
 		<div class="container">
 			<div class="span12">
 				<div class="span3">
-					<div class="buttonbox">
+					<div class="buttonbox" id="7">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon7.png" alt=""></div>OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('7');return false">That decision is made out of our corporate office...</a>
+							<a href="#" onclick="idInfo='7';return false">That decision is made out of our corporate office...</a>
 						</div>
 					</div>
 
@@ -239,12 +252,12 @@
 
 
 
-					<div class="buttonbox">
+					<div class="buttonbox" id="8">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon8.png" alt=""></div>OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('8');return false">Just send information</a>
+							<a href="#" onclick="idInfo='8';return false">Just send information</a>
 						</div>
 					</div>
 
@@ -254,12 +267,12 @@
 
 
 
-					<div class="buttonbox">
+					<div class="buttonbox" id="9">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon9.png" alt=""></div> OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('9');return false">I'm new to my position so I can't meet right now</a>
+							<a href="#" onclick="idInfo='9';return false">I'm new to my position so I can't meet right now</a>
 						</div>
 					</div>
 
@@ -291,7 +304,7 @@
 						 	"Hi ____________. this is ____________. <br>
 						 	calling from ____________. <br>
 						 	We help companies ______________________. <br>
-						 	The reason for my call today is to set an appointment to learn more about your business and determine whether there is an apportunity for us to work together. <br>
+						 	The reaseon for my call today is to set an appointment to learn more about your business and determine whether there is an apportunity for us to work together. <br>
 						 	How does (day) at (time) work for yoy?
 						 </div>
 
@@ -426,12 +439,12 @@
 				</div>
 
 				<div class="span3">
-					<div class="buttonbox">
+					<div class="buttonbox" id="10">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon15.png" alt=""></div>OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('10');return false">We once had a bad experience with your company</a>
+							<a href="#" onclick="idInfo='10';return false">We once had a bad experience with your company</a>
 						</div>
 					</div>
 
@@ -441,12 +454,12 @@
 
 
 
-					<div class="buttonbox">
+					<div class="buttonbox" id="11">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon14.png" alt=""></div>OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('11');return false">I'too busy</a>
+							<a href="#" onclick="idInfo='11';return false">I'too busy</a>
 						</div>
 					</div>
 
@@ -456,12 +469,12 @@
 
 
 
-					<div class="buttonbox">
+					<div class="buttonbox" id="12">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon13.png" alt=""></div>OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('12');return false">We're not in the market right now</a>
+							<a href="#" onclick="idInfo='12';return false">We're not in the market right now</a>
 						</div>
 					</div>
 
@@ -484,34 +497,34 @@
 			<div class="span12">
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="13">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon10.png" alt=""></div>OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('13');return false">Just give me the 30 second version of your presentation</a>
+							<a href="#" onclick="idInfo='13';return false">Just give me the 30 second version of your presentation</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="14">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon11.png" alt=""></div>OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('14');return false">I'm not interested</a>
+							<a href="#" onclick="idInfo='14';return false">I'm not interested</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="15">
 						<div class="tittlebox">
-							<div class="iconssup"><img src="assets/img/icon12.png" alt=""></div>OBJECTION
+							<i class="fa fa-comments fa-lg"></i> OBJECTION
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('15');return false">Call me back to schedule an appointment</a>
+							<a href="#" onclick="idInfo='15';return false">Call me back to shedule an appointment</a>
 						</div>
 					</div>
 				</div>
@@ -542,34 +555,34 @@
 		<div class="container">
 			<div class="span12">
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="16">
 						<div class="tittlebox">
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('16');return false">Former Sales Rep Reference</a>
+							<a href="#" onclick="idInfo='16';return false">Former Sales Rep Reference</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="17">
 						<div class="tittlebox">
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('16');return false">Referal</a>
+							<a href="#" onclick="idInfo='17';return false">Referal</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="18">
 						<div class="tittlebox">
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
 						<div class="textbox">
-							<a href="#" onclick="showDiv('16');return false">Current Customer Reference</a>
+							<a href="#" onclick="idInfo='18';return false">Current Customer Reference</a>
 						</div>
 					</div>
 				</div>

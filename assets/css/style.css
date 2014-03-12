@@ -94,21 +94,19 @@ body,.zero{
 }
 
 .buttonbox{
-    max-width: 240px;
-    min-height: 90px;
+    max-width: 260px;
+    min-height: 100px;
     background: url(../img/bgbox.jpg);
+    background-position: bottom;
     border-radius: 0.5em;
     margin: 0 auto;
     border: 0.1em dashed #fff;
 }
 
 
-
-
-
 .buttonbox .tittlebox{
     width: 100%;
-    height: 30px;
+    height: 40px;
     background-color: #fff;
     margin: 0 auto;
     border-radius: 0.5em 0.5em 0 0;
@@ -116,7 +114,7 @@ body,.zero{
     font-size: 1em;
     color: #000;
     text-align: center;
-    line-height: 30px;
+    line-height: 45px;
 }
 
 .buttonbox .textbox{
@@ -153,22 +151,7 @@ body,.zero{
         -o-transition: all 500ms ease;
         transition: all 500ms ease;
 
-
     
-}
-
-.buttonbox:hover{
-    
-    background-image:url(../img/box.png);
-    cursor:pointer;
-    color: #fff;
-    text-shadow: 0px 0px 5px #fff;
-
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
 }
 
 .showcontent{
@@ -265,5 +248,12 @@ body,.zero{
 
 .none{
     display: none;
+}
+
+.iconssup{
+
+    display: inline-block;
+
+
 }
 

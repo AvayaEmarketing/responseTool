@@ -17,17 +17,7 @@
     <script type="text/javascript">
         // From: http://www.webdeveloper.com/forum/showthread.php?266743-Switch-Div-Content-Using-Javascript&p=1229155#post1229155
 
-        function showDiv(idInfo) {
-		    
-			var sel = document.getElementById('divLinks').getElementsByTagName('div');
-			
-            for (var i = 0; i < sel.length; i++) {
-                sel[i].style.display = 'none';
-            }
-            document.getElementById('container' + idInfo).style.display = 'block';
-        }
-
-        function validaSession() {
+       function validaSession() {
             $.prettyLoader();
             $.ajax({
                 type: "POST",
@@ -45,6 +35,40 @@
         }
 
         $(document).ready(function () {
+            $('body').on('click', ".buttonbox", function () {
+			var sel = document.getElementById('divLinks').getElementsByTagName('div');//numero de contenedores para el menu Objections
+			var sel2 = document.getElementById('divLinks2').getElementsByTagName('div');//numero de contenedores para el menu Voicemail
+			var sel3 = document.getElementById('divLinks3').getElementsByTagName('div');
+			var sel4 = document.getElementById('divLinks4').getElementsByTagName('div');
+			//var sel5 = document.getElementById('divLinks5').getElementsByTagName('div');
+
+			
+				//cilco que permite ocultar todos los elementos del menu Objections
+                for (var i = 0; i < sel.length; i++) {
+                    sel[i].style.display = 'none';
+                }
+				//cilco que permite ocultar todos los elementos del menu VoiceMail
+				for (var i = 0; i < sel2.length; i++) {
+					sel2[i].style.display = 'none';
+                }
+				
+				for (var i = 0; i < sel3.length; i++) {
+					sel3[i].style.display = 'none';
+                }
+				for (var i = 0; i < sel4.length; i++) {
+					sel4[i].style.display = 'none';
+                }
+				/*for (var i = 0; i < sel5.length; i++) {
+					sel5[i].style.display = 'none';
+                }*/
+                
+				/*
+				idInfo: parametro que permite identificar el ID de un container en particular
+				*/
+                idInfo = parseInt($(this).attr('id'));
+                $("#container" + idInfo).css({"display": "block"});
+				
+            });
 
             validaSession();
 
@@ -128,7 +152,7 @@
 	<div class="row-fluid">
 		<div class="container">
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="1">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon1.png" alt=""></div>THE AHA FORMULA
 						</div>
@@ -139,7 +163,7 @@
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="2">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon2.png" alt=""></div> OPENING SCRIPT
 						</div>
@@ -150,7 +174,7 @@
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="3">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon3.png" alt=""></div> APPOINMENT/OPPORTUNITY
 						</div>
@@ -176,7 +200,7 @@
 		<div class="container">
 			<div class="span12">
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="4">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon4.png" alt=""></div> OBJECTION
 						</div>
@@ -187,7 +211,7 @@
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="5">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon5.png" alt=""></div> OBJECTION
 						</div>
@@ -198,7 +222,7 @@
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="6">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon6.png" alt=""></div> OBJECTION
 						</div>
@@ -224,7 +248,7 @@
 		<div class="container">
 			<div class="span12">
 				<div class="span3">
-					<div class="buttonbox">
+					<div class="buttonbox" id="7">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon7.png" alt=""></div>OBJECTION
 						</div>
@@ -239,7 +263,7 @@
 
 
 
-					<div class="buttonbox">
+					<div class="buttonbox" id="8">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon8.png" alt=""></div>OBJECTION
 						</div>
@@ -254,7 +278,7 @@
 
 
 
-					<div class="buttonbox">
+					<div class="buttonbox" id="9">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon9.png" alt=""></div> OBJECTION
 						</div>
@@ -426,7 +450,7 @@
 				</div>
 
 				<div class="span3">
-					<div class="buttonbox">
+					<div class="buttonbox" id="10">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon15.png" alt=""></div>OBJECTION
 						</div>
@@ -441,7 +465,7 @@
 
 
 
-					<div class="buttonbox">
+					<div class="buttonbox" id="11">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon14.png" alt=""></div>OBJECTION
 						</div>
@@ -456,7 +480,7 @@
 
 
 
-					<div class="buttonbox">
+					<div class="buttonbox" id="12">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon13.png" alt=""></div>OBJECTION
 						</div>
@@ -484,7 +508,7 @@
 			<div class="span12">
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="13">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon10.png" alt=""></div>OBJECTION
 						</div>
@@ -495,7 +519,7 @@
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="14">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon11.png" alt=""></div>OBJECTION
 						</div>
@@ -506,7 +530,7 @@
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="15">
 						<div class="tittlebox">
 							<div class="iconssup"><img src="assets/img/icon12.png" alt=""></div>OBJECTION
 						</div>
@@ -528,13 +552,9 @@
 
 </div>
 
-    <div id="sales" class="container" style="display:none;">
-        <p>Sales Technique</p>
-    </div>
 
-    <div id="camp" class="container" style="display:none;">
-        <p>Campaigns</p>
-    </div>
+
+    
 
 	<div id="voice" class="container" style="display:none;">
 
@@ -542,7 +562,7 @@
 		<div class="container">
 			<div class="span12">
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="16">
 						<div class="tittlebox">
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
@@ -553,7 +573,7 @@
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="17">
 						<div class="tittlebox">
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
@@ -564,7 +584,7 @@
 				</div>
 
 				<div class="span4">
-					<div class="buttonbox">
+					<div class="buttonbox" id="18">
 						<div class="tittlebox">
 							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
 						</div>
@@ -621,41 +641,182 @@
 					</div>
 
 				</div>
+    </div>
+	
+	
+	<!--contenido para SALES -->
+
+    <div id="sales" class="container" style="display:none;">
+        <div class="row-fluid">
+		<div class="container">
+			<div class="span12">
+				<div class="span4">
+					<div class="buttonbox" id="19">
+						<div class="tittlebox">
+							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
+						</div>
+						<div class="textbox">
+							<a href="#" onclick="showDiv('16');return false">Former Sales Rep Reference</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="buttonbox" id="20">
+						<div class="tittlebox">
+							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
+						</div>
+						<div class="textbox">
+							<a href="#" onclick="showDiv('16');return false">Referal</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="buttonbox" id="21">
+						<div class="tittlebox">
+							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
+						</div>
+						<div class="textbox">
+							<a href="#" onclick="showDiv('16');return false">Current Customer Reference</a>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
 
 
 
 
+<div class="sep"></div>
+
+
+	
+				<div class="span12 showcontent">
+					
+					<div id="divLinks3">
+
+
+						 <div id="container19">
+							Hi _________________, <br>
+							this is _______________ calling from ______________ <br>
+							I'm calling about _________________. <br>
+							Will you please return my call al _______________? <br><br>
+							Thanks!
+						 </div>
+
+						 <div id="container20">
+							Hi _________________, <br>
+							this is _______________ calling from ______________ <br>
+							_________________ asked me to give you a call. <br>
+							Will you please return my call al _______________? <br><br>
+							Thanks!
+						 </div>
+
+						 <div id="container21">
+							Hi _________________, <br>
+							this is _______________ calling from ______________ <br>
+							I'm calling about _________________. <br>
+							Will you please return my call al _______________? <br><br>
+							Thanks!
+						 </div>
+
+						 
+							
+					</div>
+
+				</div>
+    </div>
+	
+		<!--contenido para CAMPAIGNS -->
+	<div id="camp" class="container" style="display:none;">
+        <div class="row-fluid">
+		<div class="container">
+			<div class="span12">
+				<div class="span4">
+					<div class="buttonbox" id="22">
+						<div class="tittlebox">
+							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
+						</div>
+						<div class="textbox">
+							<a href="#" onclick="showDiv('16');return false">Former Sales Rep Reference</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="buttonbox" id="23">
+						<div class="tittlebox">
+							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
+						</div>
+						<div class="textbox">
+							<a href="#" onclick="showDiv('16');return false">Referal</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="buttonbox" id="24">
+						<div class="tittlebox">
+							<i class="fa fa-comments fa-lg"></i> VOICEMAIL
+						</div>
+						<div class="textbox">
+							<a href="#" onclick="showDiv('16');return false">Current Customer Reference</a>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
 
 
 
 
+<div class="sep"></div>
 
 
+	
+				<div class="span12 showcontent">
+					
+					<div id="divLinks4">
 
 
+						 <div id="container22">
+							Hi _________________, <br>
+							this is _______________ calling from ______________ <br>
+							I'm calling about _________________. <br>
+							Will you please return my call al _______________? <br><br>
+							Thanks!
+						 </div>
 
+						 <div id="container23">
+							Hi _________________, <br>
+							this is _______________ calling from ______________ <br>
+							_________________ asked me to give you a call. <br>
+							Will you please return my call al _______________? <br><br>
+							Thanks!
+						 </div>
 
+						 <div id="container24">
+							Hi _________________, <br>
+							this is _______________ calling from ______________ <br>
+							I'm calling about _________________. <br>
+							Will you please return my call al _______________? <br><br>
+							Thanks!
+						 </div>
 
+						 
+							
+					</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				</div>
     </div>
 
 

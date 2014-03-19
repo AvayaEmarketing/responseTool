@@ -1077,8 +1077,20 @@
 
 <script>
 	$(document).ready(function(){
-		$('.navswitch')+ $('a').click (function(){
-			$(this).addClass('thisactive');
+	    $('.navswitch')+ $('a').click (function(){
+	        var ids = $(this).attr("id");
+		    $(".navswitch a").each(function (index) {
+		        var id2 = $(this).attr("id");
+		        if (id2 === ids) {
+		            $(this).addClass('thisactive');
+		            $(this).removeClass('thisinactive');
+		        } else {
+		            $(this).removeClass('thisactive');
+		            $(this).addClass('thisinactive');
+		        }
+		    });
+		    
+			
 		});
 	});
 </script>

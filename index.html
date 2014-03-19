@@ -149,8 +149,6 @@
 			<span12>
 				<div class="navswitch">
 					<ul>
-					    <li><a href="#" id="object">Objections</a></li>
-						<li><a href="#" id="voicemail">Voicemail</a></li>
 						<li><a href="#" id="salestechnique">Sales Technique</a></li>
 						<li><a href="#" id="general">General Script</a></li>
 						<li><a href="#" id="campaigns">Campaigns</a></li>
@@ -1077,7 +1075,13 @@
 }).fadeIn();
 </script>-->
 
-
+<script>
+	$(document).ready(function(){
+		$('.navswitch')+ $('a').click (function(){
+			$(this).addClass('thisactive');
+		});
+	});
+</script>
 
 
 

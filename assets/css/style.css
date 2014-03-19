@@ -193,7 +193,7 @@ body,.zero{
 }
 
 .navswitch{
-    width: 700px;
+    width: 600px;
     height: 50px;
     margin: 0 auto;
     background: #333;
@@ -216,7 +216,7 @@ body,.zero{
 
 .navswitch ul li{
     float: left;
-    width: 20%;
+    width: 33%;
 
 }
 .navswitch ul li a{
@@ -238,6 +238,13 @@ body,.zero{
         -o-transition: all 500ms ease;
         transition: all 500ms ease;
 
+
+}
+
+.navswitch ul li .thisactive{
+    color: #fff;
+    line-height: 30px;
+    background-color: #c00;
 
 }
 

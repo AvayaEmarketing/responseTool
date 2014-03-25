@@ -16,19 +16,54 @@
     <script type="text/javascript" src="js/prettyLoader.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('body').on('click', ".buttonbox2", function () {
+            $('body').on('click', ".buttonbox", function () {
                 var sel2 = document.getElementById('divLinks2').getElementsByTagName('div');//numero de contenedores para el menu Voicemail
-                //ciclo que permite ocultar todos los elementos del menu VoiceMail
+                //cilco que permite ocultar todos los elementos del menu VoiceMail
                 for (var i = 0; i < sel2.length; i++) {
                     sel2[i].style.display = 'none';
                 }
-                // idInfo: parametro que permite identificar el ID de un container en particular
-                idInfo = parseInt($(this).attr('id'));
+                //	idInfo: parametro que permite identificar el ID de un container en particular
+				idInfo = parseInt($(this).attr('id'));
                 $("#container" + idInfo).css({ "display": "block" });
 
                 $("#btnvoice").click(function () {
                     $("#voice").css("display", "block");
-                })
+                });
+                
+
+                $(".buttonbox").each(function (index) {
+                    id2 = parseInt($(this).attr("id"));
+
+                    if (id2 === idInfo) {
+                        
+                        $("#" + idInfo).css({
+                            "background-image": "url(assets/img/box.png)",
+                            "background-color": "#000",
+                            "background-position": "bottom left",
+                            "cursor":"pointer",
+                            "color":"#fff",
+                            "text-shadow":"0px 0px 5px #fff",
+                            "-webkit-transition":"all 500ms ease",
+                            "-moz-transition":"all 500ms ease",
+                            "-ms-transition":"all 500ms ease",
+                            "-o-transition":"all 500ms ease",
+                            "transition":"all 500ms ease",
+
+                        });
+                    } else {
+                        $("#" + id2).css({
+                            "max-width": "260px",
+                            "min-height": "100px",
+                            "background": "url(assets/img/bgbox.jpg)",
+                            "background-color": "#cc0000",
+                            "background-position":"bottom",
+                            "border-radius":"0.5em",
+                            "margin":"0 auto",
+                            "border":"0.1em dashed #fff",
+                        });
+                    }
+                });
+                
             });
         });
     </script>
@@ -72,29 +107,19 @@
     <div id="camp" class="container">
     	
 		<div class="row-fluid">
-			<div class="span5 well">
+			<div class="span6 offset3 well">
 					
         		<div class="menulist">
         			<ul>
-        				<li><a href="#" class="buttonbox2" id="34"><img src="assets/img/iconmail.png" alt=""> Unified Communications and Collaboration</a></li>
-        				<li><a href="#" class="buttonbox2" id="34"><img src="assets/img/iconmail.png" alt=""> Customer Experience Management</a></li>
-        				<li><a href="#" class="buttonbox2" id="34"><img src="assets/img/iconmail.png" alt=""> Networking</a></li>
-        				<li><a href="#" class="buttonbox2" id="34"><img src="assets/img/iconmail.png" alt=""> Midmarket</a></li>
-        				<li><a href="#" class="buttonbox2" id="34"><img src="assets/img/iconmail.png" alt=""> Cloud</a></li>
+        				<li><a href="#" class="buttonbox2" id="34"><img src="assets/img/iconmail2.png" alt=""> Unified Communications <img class="pull-right" src="assets/img/uc.png" alt="" /></a></li>
+        				<li><a href="#" class="buttonbox2" id="34"><img src="assets/img/iconmail2.png" alt=""> Customer Experience <img class="pull-right" src="assets/img/customer.png" alt="" /></a></li>
+        				<li><a href="#" class="buttonbox2" id="34"><img src="assets/img/iconmail2.png" alt=""> Small and Midmarket Business <img class="pull-right" src="assets/img/mid.png" alt="" /></a></li>
+        				<li><a href="#" class="buttonbox2" id="34"><img src="assets/img/iconmail2.png" alt=""> Networking <img class="pull-right" src="assets/img/net.png" alt="" /></a></li>
         			</ul>
         		</div>
                     
 			</div>
-			<div class="span7">
-				
-				<div id="divLinks2">
-
-						 <div id="container34">
-						 	<img src="assets/img/imgoft.png" alt=""/>
-						 </div>
-
-					</div>
-			</div>
+			
 		</div>
 
     </div>

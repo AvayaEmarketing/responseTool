@@ -18,17 +18,52 @@
         $(document).ready(function () {
             $('body').on('click', ".buttonbox", function () {
                 var sel2 = document.getElementById('divLinks2').getElementsByTagName('div');//numero de contenedores para el menu Voicemail
-                //ciclo que permite ocultar todos los elementos del menu VoiceMail
+                //cilco que permite ocultar todos los elementos del menu VoiceMail
                 for (var i = 0; i < sel2.length; i++) {
                     sel2[i].style.display = 'none';
                 }
-                // idInfo: parametro que permite identificar el ID de un container en particular
-				idInfo = parseInt($(this).attr('id'));
+                //  idInfo: parametro que permite identificar el ID de un container en particular
+                idInfo = parseInt($(this).attr('id'));
                 $("#container" + idInfo).css({ "display": "block" });
 
                 $("#btnvoice").click(function () {
                     $("#voice").css("display", "block");
-                })
+                });
+                
+
+                $(".buttonbox").each(function (index) {
+                    id2 = parseInt($(this).attr("id"));
+
+                    if (id2 === idInfo) {
+                        
+                        $("#" + idInfo).css({
+                            "background-image": "url(assets/img/box.png)",
+                            "background-color": "#000",
+                            "background-position": "bottom left",
+                            "cursor":"pointer",
+                            "color":"#fff",
+                            "text-shadow":"0px 0px 5px #fff",
+                            "-webkit-transition":"all 500ms ease",
+                            "-moz-transition":"all 500ms ease",
+                            "-ms-transition":"all 500ms ease",
+                            "-o-transition":"all 500ms ease",
+                            "transition":"all 500ms ease",
+
+                        });
+                    } else {
+                        $("#" + id2).css({
+                            "max-width": "260px",
+                            "min-height": "100px",
+                            "background": "url(assets/img/bgbox.jpg)",
+                            "background-color": "#cc0000",
+                            "background-position":"bottom",
+                            "border-radius":"0.5em",
+                            "margin":"0 auto",
+                            "border":"0.1em dashed #fff",
+                        });
+                    }
+                });
+                
             });
         });
     </script>
@@ -71,7 +106,7 @@
 
 
             <div class="span12">
-                <div class="span4" onclick="document.location.href='objections.html';">
+                <div class="span3" onclick="document.location.href='objections.html';">
                     <div class="buttonbox" id="19">
                         <div class="tittlebox">
                             <div class="iconssup">
@@ -85,7 +120,7 @@
                     </div>
                 </div>
 
-                <div class="span4" onclick="document.location.href='voicemails.html';">
+                <div class="span3" onclick="document.location.href='voicemails.html';">
                     <div class="buttonbox" id="20">
                         <div class="tittlebox">
                             <div class="iconssup">
@@ -99,7 +134,7 @@
                     </div>
                 </div>
 
-                <div class="span4" onclick="document.location.href='gatekeeper.html';">
+                <div class="span3" onclick="document.location.href='gatekeeper.html';">
                     <div class="buttonbox" id="21">
                         <div class="tittlebox">
                             <div class="iconssup">
@@ -112,6 +147,22 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="span3" onclick="document.location.href='bant.html';">
+                    <div class="buttonbox" id="21">
+                        <div class="tittlebox">
+                            <div class="iconssup">
+                                <img src="assets/img/icon22.png" alt="" />
+                            </div>
+                            Sales Technique
+                        </div>
+                        <div class="textbox">
+                            <a href="bant.html">BANT Qualification questions</a>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
 

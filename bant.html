@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Avaya</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-responsive.css" />
+    <link href="css/prettyLoader.css" rel="stylesheet" />
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/prettyLoader.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('body').on('click', ".buttonbox", function () {
+                var sel2 = document.getElementById('divLinks2').getElementsByTagName('div');//numero de contenedores para el menu Voicemail
+                //cilco que permite ocultar todos los elementos del menu VoiceMail
+                for (var i = 0; i < sel2.length; i++) {
+                    sel2[i].style.display = 'none';
+                }
+                //  idInfo: parametro que permite identificar el ID de un container en particular
+                idInfo = parseInt($(this).attr('id'));
+                $("#container" + idInfo).css({ "display": "block" });
+
+                $("#btnvoice").click(function () {
+                    $("#voice").css("display", "block");
+                });
+                
+
+                $(".buttonbox").each(function (index) {
+                    id2 = parseInt($(this).attr("id"));
+
+                    if (id2 === idInfo) {
+                        
+                        $("#" + idInfo).css({
+                            "background-image": "url(assets/img/box.png)",
+                            "background-color": "#000",
+                            "background-position": "bottom left",
+                            "cursor":"pointer",
+                            "color":"#fff",
+                            "text-shadow":"0px 0px 5px #fff",
+                            "-webkit-transition":"all 500ms ease",
+                            "-moz-transition":"all 500ms ease",
+                            "-ms-transition":"all 500ms ease",
+                            "-o-transition":"all 500ms ease",
+                            "transition":"all 500ms ease",
+
+                        });
+                    } else {
+                        $("#" + id2).css({
+                            "max-width": "260px",
+                            "min-height": "100px",
+                            "background": "url(assets/img/bgbox.jpg)",
+                            "background-color": "#cc0000",
+                            "background-position":"bottom",
+                            "border-radius":"0.5em",
+                            "margin":"0 auto",
+                            "border":"0.1em dashed #fff",
+                        });
+                    }
+                });
+                
+            });
+        });
+    </script>
+</head>
+<body class="zero">
+
+    <div class="row-fluid navtop">
+        <div class="container">
+            <div class="span8">
+                <img src="assets/img/avaya.png" alt="" />
+
+            </div>
+
+            <div class="span4">
+                <img src="assets/img/response.png" alt="" />
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="container">
+            <div class="span12">
+                <div class="navswitch">
+                    <ul>
+                        <li><a href="salesTechnique.html" id="salestechnique" class="tabactive">Sales Technique</a></li>
+                        <li><a href="GeneralScript.html" id="general">General Script</a></li>
+                        <li><a href="campaigns.html" id="campaigns">Campaigns</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Este es el menu de Sales Technique -->
+    <div id="sales" class="container">
+        <div class="row-fluid">
+
+
+            <div class="span12">
+                <div class="span3" onclick="document.location.href='objections.html';">
+                    <div class="buttonbox" id="19">
+                        <div class="tittlebox">
+                            <div class="iconssup">
+                                <img src="assets/img/icon19.png" alt="" />
+                            </div>
+                            Sales Technique
+                        </div>
+                        <div class="textbox">
+                            <a href="objections.html">How to handle Objections</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span3" onclick="document.location.href='voicemails.html';">
+                    <div class="buttonbox" id="20">
+                        <div class="tittlebox">
+                            <div class="iconssup">
+                                <img src="assets/img/icon20.png" alt="" />
+                            </div>
+                            Sales Technique
+                        </div>
+                        <div class="textbox">
+                            <a href="voicemails.html" id="btnvoice">How to leave Voicemails</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span3" onclick="document.location.href='gatekeeper.html';">
+                    <div class="buttonbox" id="21">
+                        <div class="tittlebox">
+                            <div class="iconssup">
+                                <img src="assets/img/icon21.png" alt="" />
+                            </div>
+                            Sales Technique
+                        </div>
+                        <div class="textbox">
+                            <a href="gatekeeper.html">How to pass the gatekeeper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span3" onclick="document.location.href='bant.html';">
+                    <div class="buttonbox" id="22">
+                        <div class="tittlebox">
+                            <div class="iconssup">
+                                <img src="assets/img/icon22.png" alt="" />
+                            </div>
+                            Sales Technique
+                        </div>
+                        <div class="textbox">
+                            <a href="bant.html">BANT Qualification questions</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sepbig"></div>
+
+     <div id="camp" class="container">
+        <div class="row-fluid">
+        <div class="container">
+            <div class="span12">
+                <div class="span4">
+                    <div class="buttonbox" id="35">
+                        <div class="tittlebox">
+                             <div class="iconssup">
+                                <img src="assets/img/icon14.png" alt="" />
+                            </div> <span>BANT Qualification questions</span>
+                        </div>
+                        <div class="textbox">
+                            <a href="#">General</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span4">
+                    <div class="buttonbox" id="27">
+                        <div class="tittlebox">
+                           <div class="iconssup">
+                                <img src="assets/img/icon14.png" alt="" />
+                            </div> BANT Qualification questions
+                        </div>
+                        <div class="textbox">
+                            <a href="#">Contact Center</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span4">
+                    <div class="buttonbox" id="28">
+                        <div class="tittlebox">
+                             <div class="iconssup">
+                                <img src="assets/img/icon14.png" alt="" />
+                            </div> BANT Qualification questions
+                        </div>
+                        <div class="textbox">
+                            <a href="#">Unified Communications</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="sep"></div>
+
+
+    
+                <div class="row-fluid">
+        <div class="container">
+
+            <div class="span12">
+                <div class="span3">
+                    <div class="buttonbox" id="29">
+                        <div class="tittlebox">
+                            <div class="iconssup">
+                                <img src="assets/img/icon14.png" alt="" />
+                            </div> BANT Qualification questions
+                        </div>
+                        <div class="textbox">
+                            <a href="#" >Networking</a>
+                        </div>
+                    </div>
+
+<div class="sep"></div>
+                    <div class="buttonbox" id="31">
+                        <div class="tittlebox">
+                            <div class="iconssup">
+                                <img src="assets/img/icon14.png" alt="" />
+                            </div> BANT Qualification questions
+                        </div>
+                        <div class="textbox">
+                            <a href="#" >Video</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="span6 showcontent">
+                    
+                    <div id="divLinks2">
+
+
+                         <div id="container35" class="bgshow11">
+                            <strong class="bold2">PBX</strong> <br/>   
+                            1) Do you currently have a PBX in your company? Is it owned or rented?
+                             <br/> <br/> 
+                            <strong class="bold2">PBX Age</strong><br/> 
+                            2) How old is the PBX?
+                             <br/> <br/> 
+                            <strong class="bold2">PBX Brand and PBX version</strong><br/> 
+                            3) Which brand is the PBX? Do you know the model? Is it TDM or IP?
+                            <br/> <br/> 
+                            <strong class="bold2">Extensions</strong><br/> 
+                            "4) How many extensions do you have in your phone system?  
+                            How many trunks do you have? Do you have analog phones, digital phones or IP phones?"
+                            <br/> <br/> 
+                            <strong class="bold2">Locations / Branches</strong><br/> 
+                            5) Do you have other locations? Are they connected? Are they connected only through Data or also through voice?
+                            <br/> 
+                            <strong class="bold2">Satisfaction</strong><br/>
+                            "6) Does the PBX satisfy your current needs? (They may have changed the way they work or 
+                            expanded in number of extensions and the PBX is not capable to go with the change) "
+                            <br/> <br/> 
+                            <strong class="bold2">Employees</strong><br/> 
+                            "7) How many employees do you have in this location? 
+                            How many employees do you have in the whole company? Do you have mobile employees? How many? "
+                             <br/> <br/> 
+                            <strong class="bold2">Carrier</strong><br/> 
+                            8) Which is your carrier?
+                             <br/> <br/> 
+                            <strong class="bold2">Industry</strong><br/> 
+                            9) Which is the main activity in the company?
+                            <br/> <br/> 
+                         </div>
+
+                         <div id="container27" class="bgshow11"><br/><br/>
+                            10) Do you have a Contact Center in the company?<br/><br/>
+                             <strong class="bold2">-YES:</strong><br/>
+                            A - How many agents do you have?<br/><br/>
+                            B - What kind of service do you have in the Contact Center? (Outbound calls, inbound calls, Customer care, sales, etc.)<br/><br/>
+                            C - What kind of report management software do you have? How do you measure  your customer satisfaction and productivity? <br/><br/>
+                            Do you have an IVR?<br/><br/>
+                            D – Are you interested in  adding other ways of contact: email, SMS, etc.?<br/><br/>
+
+                            <strong class="bold2">- NO:</strong> <br/>
+                            Verify if they outsource the Call center and if they are interested in stopping the outsource to integrate the CC to their phone system.<br/><br/>
+                         </div>
+
+                         <div id="container28"  class="bgshow11">
+                            <br/><br/>  
+                            11) Do you currently have Unified Communications?  <br/>
+                            <strong class="bold2">NO:</strong> Are you interested in the possibility of integrating your PBX:<br/>
+                            a- with your mobile phone?  With your voicemail?<br/>
+                            b- With your mail system? <br/>
+                            c- With the remote users or mobile users to increase the productivity  and cut costs?<br/>
+                             <br/><br/>
+                            <strong class="bold2">Maintenance Service (Only Clients)</strong><br/>
+                            12) It has a maintenance contract? Is it directly with Avaya or through one of our business partner? Which partner would that be?<br/>
+                            Do you know what this contract covers?<br/>
+                            Are the response times the expected? What about the quality of care and service?<br/>
+                         </div>
+
+                         <div id="container29"  class="bgshow11">
+                            <br/><br/>
+                            13) Which brand are your switches and/or routers?<br/>
+                            -Do you have an standard in the brand of this equipments?<br/>
+                            -How many switches / routers you have and with what capability (Core Switches; Edge Switches; how many ports are there?)<br/>
+                            -How old is the networking equipment?<br/>
+                            -What is the speed of your equipments? (10 megabits; 100 megabits; 1000 Megabits/1 GB)<br/>
+                            -Do your equipments have QoS (Quality of service)?  [QoS is a feature of routers and Switches wich prioritizes traffic so that more important traffic can pass  first]<br/>
+                            -How many equipments you have to connect to the net (PC's, IP Phones, security camaras) ?<br/>
+                            -Do you have a need for acquisition or upgrading of these equipments?<br/>
+                            -In case of acquisition, do you require instalation/configuration service ofr the new equipments?<br/>
+                            -In case of acquisition, do you feel interested in any of these services?:<br/>
+                                   a- Parts replacement service: (inmediate parts replacement, in a few hours); or you can get:<br/>
+                                   b- Warranty service ( replacement within 45 to 60 days)<br/>
+                         </div>
+
+                         <div id="container30"  class="bgshow11">
+                            <br/><br/>
+                            <strong class="bold2">1- BUDGET:</strong> <br/>
+                            Do you have a budget (or amount of money) for this project? The Budget is: a. Approved; b. Requested but not Approved; c. yet to be Requested?<br/>
+                            "In order to bring you a proposal that meets your needs, and that you would be able to deploy, <br/>
+                            please provide an estimated range of assigned budget that you may have/ may get:"
+                             <br/><br/>
+                            From U$S 5.000 to 10.000 (five thousands to ten thousands dollars) <br/>
+                            From U$S 10.000 to 30.000 (ten thousands to thirty thousands dollars) <br/>
+                            More than U$S 50.000 (more than fifty thousands dollars)  <br/>
+                             <br/><br/>
+                            <strong class="bold2">2- AUTHORITY:</strong> <br/>
+                            "Is the contact the primary decision maker for IT purchases? Who would be the final decision maker?  <br/>
+                            (include every decision maker's name as provided)"<br/>
+                            If not or not the aconomic desition maker or in case that there are othe desition makers involved, inform the name of this person and title (buyer, finances, etc.)<br/>
+                            <br/><br/>
+                            <strong class="bold2">3- NEED:</strong><br/>
+                            Are they in a planning stage (just receiving information (not eligible)) or have you already identified your needs? <br/>
+                            Have you defined any specific requirements as well?<br/>
+                            Do you currently have any global or local telecommunications Project? Like: <br/>
+                            PBX Upgrade. <br/>
+                            IP Telephony implementation. <br/>
+                            Deployment or expansion in your Call Center. <br/>
+                            Mobility Solutions and Unified Messaging. <br/>
+                            Data<br/>
+                            Maintenance service<br/>
+                             <br/><br/>
+                            Detail and explain the project, what’s the main idea and reason<br/>
+                            (I.E.; IP telephony to reduce costs in calls, etc)
+                             <br/><br/>
+                            <strong class="bold2">4- TIMELINE:</strong> <br/>
+                            Do you think you can start the Project implementation/deployment in…?<br/>
+                            0 to 30 days<br/>
+                            1 to 3 months<br/>
+                            3 to 6 months<br/>
+                            7 to 12 months  (not eligible)<br/>
+                             > 1 year  (not eligible)<br/>
+                            <br/><br/>
+                            <strong class="bold2">5 – INTENT:</strong><br/>
+                            Is the contact interested in further contact with Avaya? <br/>
+                            Or is it interested in just information (does not qualify)? 
+                         </div>
+
+                         <div id="container31"  class="bgshow11">
+                            <br/><br/>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, doloremque, unde, ut, incidunt sit aliquid magni non laborum eveniet dignissimos fugiat obcaecati molestiae modi voluptatem esse impedit blanditiis dolorum laboriosam.
+                         </div>
+                         
+                            
+                    </div>
+
+                </div>
+
+                <div class="span3">
+                    <div class="buttonbox" id="30">
+                        <div class="tittlebox">
+                            BANT Qualification questions
+                        </div>
+                        <div class="textbox">
+                            <a href="#">BANTI CRITERIA</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+                </div>
+
+   
+
+</body>
+</html>
+
+

@@ -104,11 +104,6 @@ body,.zero{
 }
 
 
-.buttonbox2{
-
-}
-
-
 .buttonbox .tittlebox{
     width: 100%;
     height: 40px;
@@ -283,6 +278,52 @@ body,.zero{
 .gatekeeper{
     max-width: 1000px;
 }
+
+
+.onthis{
+    width: 100%;
+    min-height: 52px;
+    text-align: center;
+    font-family: 'proxima_nova_rgbold';
+    font-size: 1.2em;
+    margin: 0 auto;
+    padding-top: 8px;
+    background-color: #333;
+    border-radius: 0 0 5px 5px; 
+    background-image:url(../img/box.png);
+    background-position: bottom left;
+}
+
+
+.onthis a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.onthis a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.subbox {
+    list-style: none;
+}
+
+.subbox a{
+    font-size: 12px;
+    font-family: 'proximanova-regular';
+    list-style: none;
+    line-height: 14px;
+    background: none;
+
+}
+.subbox a:hover{
+    text-decoration: underline;
+    color: #c00;
+}
+
+
+
 
 #container1, #container2, #container3, #container4, #container5,
 #container6, #container7, #container8, #container9, #container10, #container11,

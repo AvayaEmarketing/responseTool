@@ -66,6 +66,58 @@
                 
             });
         });
+		
+		//$('body').on('click', ".hijos", function () {
+		$(document).on ("click", ".hijos", function () {
+		        var sel2 = document.getElementById('divLinks2').getElementsByTagName('div');//numero de contenedores para el menu Voicemail
+                //cilco que permite ocultar todos los elementos del menu VoiceMail
+                for (var i = 0; i < sel2.length; i++) {
+                    sel2[i].style.display = 'none';
+                }
+                //  idInfo: parametro que permite identificar el ID de un container en particular
+                idInfo = parseInt($(this).attr('id'));
+                $("#container" + idInfo).css({ "display": "block" });
+
+                $("#btnvoice").click(function () {
+                    $("#voice").css("display", "block");
+                });
+                
+
+                $(".buttonbox").each(function (index) {
+                    id2 = parseInt($(this).attr("id"));
+
+                    if (id2 === idInfo) {
+                        
+                        $("#" + idInfo).css({
+                            "background-image": "url(assets/img/box.png)",
+                            "background-color": "#000",
+                            "background-position": "bottom left",
+                            "cursor":"pointer",
+                            "color":"#fff",
+                            "text-shadow":"0px 0px 5px #fff",
+                            "-webkit-transition":"all 500ms ease",
+                            "-moz-transition":"all 500ms ease",
+                            "-ms-transition":"all 500ms ease",
+                            "-o-transition":"all 500ms ease",
+                            "transition":"all 500ms ease",
+
+                        });
+                    } else {
+                        $("#" + id2).css({
+                            "max-width": "260px",
+                            "min-height": "100px",
+                            "background": "url(assets/img/bgbox.jpg)",
+                            "background-color": "#cc0000",
+                            "background-position":"bottom",
+                            "border-radius":"0.5em",
+                            "margin":"0 auto",
+                            "border":"0.1em dashed #fff",
+                        });
+                    }
+                });
+                
+        });
+        
     </script>
 </head>
 <body class="zero">
@@ -338,6 +390,60 @@
                                    a- Parts replacement service: (inmediate parts replacement, in a few hours); or you can get:<br/>
                                    b- Warranty service ( replacement within 45 to 60 days)<br/>
                          </div>
+						 <div id="container38"  class="bgshow11">
+						    <strong class="bold2">1- BUDGET:</strong> <br/>
+                            Do you have a budget (or amount of money) for this project? The Budget is: a. Approved; b. Requested but not Approved; c. yet to be Requested?<br/>
+                            "In order to bring you a proposal that meets your needs, and that you would be able to deploy, <br/>
+                            please provide an estimated range of assigned budget that you may have/ may get:"
+                             <br/><br/>
+                            From U$S 5.000 to 10.000 (five thousands to ten thousands dollars) <br/>
+                            From U$S 10.000 to 30.000 (ten thousands to thirty thousands dollars) <br/>
+                            More than U$S 50.000 (more than fifty thousands dollars)  <br/>
+                             <br/><br/>
+					    </div>
+						
+						<div id="container39"  class="bgshow11">
+						    <strong class="bold2">2- AUTHORITY:</strong> <br/>
+                            "Is the contact the primary decision maker for IT purchases? Who would be the final decision maker?  <br/>
+                            (include every decision maker's name as provided)"<br/>
+                            If not or not the aconomic desition maker or in case that there are othe desition makers involved, inform the name of this person and title (buyer, finances, etc.)<br/>
+                            <br/><br/>
+					    </div>
+						
+						<div id="container40"  class="bgshow11">
+						    <strong class="bold2">3- NEED:</strong><br/>
+                            Are they in a planning stage (just receiving information (not eligible)) or have you already identified your needs? <br/>
+                            Have you defined any specific requirements as well?<br/>
+                            Do you currently have any global or local telecommunications Project? Like: <br/>
+                            PBX Upgrade. <br/>
+                            IP Telephony implementation. <br/>
+                            Deployment or expansion in your Call Center. <br/>
+                            Mobility Solutions and Unified Messaging. <br/>
+                            Data<br/>
+                            Maintenance service<br/>
+                             <br/><br/>
+                            Detail and explain the project, what’s the main idea and reason<br/>
+                            (I.E.; IP telephony to reduce costs in calls, etc)
+                             <br/><br/>
+					    </div>
+						
+						<div id="container41"  class="bgshow11">
+						    <strong class="bold2">4- TIMELINE:</strong> <br/>
+                            Do you think you can start the Project implementation/deployment in…?<br/>
+                            0 to 30 days<br/>
+                            1 to 3 months<br/>
+                            3 to 6 months<br/>
+                            7 to 12 months  (not eligible)<br/>
+                             1 year  (not eligible)<br/>
+                            <br/><br/>
+					    </div>
+						
+						<div id="container42"  class="bgshow11">
+						   <strong class="bold2">5 – INTENT:</strong><br/>
+                            Is the contact interested in further contact with Avaya? <br/>
+                            Or is it interested in just information (does not qualify)? 
+                            <br/><br/>
+					    </div>
 
                          <div id="container30"  class="bgshow11">
                             <br/><br/>
@@ -393,17 +499,18 @@
                 </div>
 
                 <div class="span3">
-                    <div class="buttonbox" id="30">
+                    <div class="buttonbox">
                         <div class="tittlebox">
                             BANT Qualification questions
                         </div>
                         <div class="textbox">
                             <a href="#">BANTI CRITERIA</a>
-                            <li class="subbox"><a href="#">BUDGET</a></li>
-                            <li class="subbox"><a href="#">AUTHORITY</a></li>
-                            <li class="subbox"><a href="#">NEED</a></li>
-                            <li class="subbox"><a href="#">TIMELINE</a></li>
-                            <li class="subbox"><a href="#">INTENT</a></li>
+                            <!--<li class="subbox"><a href="#">BUDGET</a></li>-->
+							<li class="subbox"><a href="#" class="hijos" id="38">BUDGET</a></li>
+                            <li class="subbox"><a href="#" class="hijos" id="39">AUTHORITY</a></li>
+                            <li class="subbox"><a href="#" class="hijos" id="40">>NEED</a></li>
+                            <li class="subbox"><a href="#" class="hijos" id="41">TIMELINE</a></li>
+                            <li class="subbox"><a href="#" class="hijos" id="42">INTENT</a></li>
                         </div>
                     </div>
 

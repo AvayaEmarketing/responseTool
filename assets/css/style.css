@@ -184,6 +184,17 @@ body,.zero{
     height:320px;
 
 }
+.showcontent a{
+    font-size: 19px;
+    color: #fff;
+    font-family: 'proxima_nova_rgbold';
+    text-decoration: underline;
+
+}
+
+.showcontent a:hover{
+    color: #E30A21;
+}
 
 
 .sep{
@@ -216,7 +227,7 @@ body,.zero{
 
 .navswitch ul li{
     float: left;
-    width: 33%;
+    width: 25%;
 
 }
 .navswitch ul li a{
@@ -313,31 +324,96 @@ body,.zero{
     font-size: 12px;
     font-family: 'proximanova-regular';
     list-style: none;
-    line-height: 14px;
+    line-height: 20px;
     background: none;
 
 }
+
 .subbox a:hover{
     text-decoration: underline;
     color: #c00;
 }
 
+.langscript{
+    display: inline-block;
+    width: 25%;
+    float: left;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'proxima_nova_rgbold';
+    font-size: 18px;
+}
+
+.langscript a{
+    color: #fff;
+}
+
+.langscript a:hover{
+    color: #E30A21;
+}
 
 
+.textuseful{
+    font-size: 15px;
+    font-family: 'proximanova-regular';
+    color: #666;
+}
 
+
+.uluseful ul{
+padding-left: 10px;
+}
+
+.uluseful li{
+    padding: 3px;
+    list-style: url(../img/lius.png);
+
+}
+
+.uluseful li:hover{
+    list-style: url(../img/lius2.png);
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.uluseful li a{
+    color: #666;
+}
+
+.uluseful li a:hover{
+    color: #E30A21;
+    padding-left: 10px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.titleus{
+    background-color: #E30A21;
+    color: #fff;
+    font-size: 22px;
+    font-family: 'proxima_nova_rgbold';
+    line-height: 90px;
+}
 #container1, #container2, #container3, #container4, #container5,
 #container6, #container7, #container8, #container9, #container10, #container11,
 #container12, #container13, #container14, #container15, #container16, #container17, #container18, #container19, #container20, #container21,
-#container22, #container23, #container24, #container25, #container26, #container27 , #container28, #container29, #container30, #container31, #container32, #container33,#container38,#container39,#container40,#container41,#container42{
+#container22, #container23, #container24, #container25, #container26, #container27 , #container28, #container29, #container30, #container31, #container32, #container33,#container38,#container39,#container40,#container41,#container42,#container43{
   display:none;
   height:auto;
-  width: 100%;
+  width: 94%;
   font-family: 'proximanova-lihgt';
-  font-size: 1.4em;
-  text-align: center;
+  font-size: 1.2em;
+  text-align: left;
   color: #fff;
-  line-height: 1.5em;
-  padding: 30px 10px; 
+  line-height: 1.3em;
+  padding: 50px 20px; 
   background-color: #333;
   border-radius: 0.5em;
   box-shadow: 0px 0px 8px #666;
@@ -350,7 +426,7 @@ body,.zero{
   height:300px;
   width: 100%;
   font-family: 'proximanova-lihgt';
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-align: center;
   color: #333;
 
@@ -361,13 +437,13 @@ body,.zero{
 #container35{
   display:none;
   height:auto;
-  width: 100%;
+  width: 94%;
   font-family: 'proximanova-lihgt';
-  font-size: 1.1em;
+  font-size: 1.2em;
   text-align: left;
   color: #fff;
-  line-height: 1.5em;
-  padding: 100px 10px 10px 10px; 
+  line-height: 1.3em;
+  padding: 50px 20px; 
   background-color: #333;
   border-radius: 0.5em;
   box-shadow: 0px 0px 8px #666;
@@ -413,10 +489,15 @@ body,.zero{
 .menulist{
     font-family: 'proxima_nova_rgbold';
     font-size: 1.4em;
-
-
 }
 
+.contlist{
+    min-height: 200px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
 
 .menulist ul{
     list-style: none;
@@ -427,12 +508,15 @@ body,.zero{
 }
 
 .menulist ul li{
-    width: 100%;
+    width: 99%;
     height: 80px;
     margin: 10px 0;
     border-radius: 5px;
-    padding: 5px 0 5px 10px;
     border: 1px dashed #666;
+}
+
+.menulist ul li img{
+    margin-left: 20px;
 }
 
 .menulist ul li a{
@@ -447,8 +531,6 @@ body,.zero{
 .bold{
     font-family: 'proxima_nova_rgbold';
     font-weight: normal;
-    background: #C00;
-    padding: 3px 5px;
     border-radius: 5px;
 }
 
@@ -459,127 +541,127 @@ body,.zero{
 
 .bgshow01{
     background: url(../img/bgshow01.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow02{
     background: url(../img/bgshow02.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow03{
     background: url(../img/bgshow03.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow04{
     background: url(../img/bgshow04.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow05{
     background: url(../img/bgshow05.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow06{
     background: url(../img/bgshow06.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow07{
     background: url(../img/bgshow07.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow08{
     background: url(../img/bgshow08.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow09{
     background: url(../img/bgshow09.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow10{
     background: url(../img/bgshow10.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow11{
     background: url(../img/bgshow11.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow12{
     background: url(../img/bgshow12.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow13{
     background: url(../img/bgshow13.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow14{
     background: url(../img/bgshow14.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow15{
     background: url(../img/bgshow15.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow16{
     background: url(../img/bgshow16.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow17{
     background: url(../img/bgshow17.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow18{
     background: url(../img/bgshow18.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow19{
     background: url(../img/bgshow19.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow20{
     background: url(../img/bgshow20.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow21{
     background: url(../img/bgshow21.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow22{
     background: url(../img/bgshow22.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow23{
     background: url(../img/bgshow23.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow24{
     background: url(../img/bgshow24.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 .bgshow25{
     background: url(../img/bgshow25.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 
@@ -587,7 +669,7 @@ body,.zero{
 
 .bgshow26{
     background: url(../img/bgshow26.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }
 
 
@@ -595,5 +677,5 @@ body,.zero{
 
 .bgshow31{
     background: url(../img/bgshow31.png) no-repeat;
-    background-position: top left;
+    background-position: top right;
 }

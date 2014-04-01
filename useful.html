@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Avaya Response Tool</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-responsive.css" />
+    <link href="css/prettyLoader.css" rel="stylesheet" />
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/prettyLoader.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('body').on('click', ".buttonbox", function () {
+                var sel2 = document.getElementById('divLinks2').getElementsByTagName('div');//numero de contenedores para el menu Voicemail
+                //cilco que permite ocultar todos los elementos del menu VoiceMail
+                for (var i = 0; i < sel2.length; i++) {
+                    sel2[i].style.display = 'none';
+                }
+                //	idInfo: parametro que permite identificar el ID de un container en particular
+				idInfo = parseInt($(this).attr('id'));
+                $("#container" + idInfo).css({ "display": "block" });
+
+                $("#btnvoice").click(function () {
+                    $("#voice").css("display", "block");
+                });
+                
+
+                $(".buttonbox").each(function (index) {
+                    id2 = parseInt($(this).attr("id"));
+
+                    if (id2 === idInfo) {
+                        
+                        $("#" + idInfo).css({
+                            "background-image": "url(assets/img/box.png)",
+                            "background-color": "#000",
+                            "background-position": "bottom left",
+                            "cursor":"pointer",
+                            "color":"#fff",
+                            "text-shadow":"0px 0px 5px #fff",
+                            "-webkit-transition":"all 500ms ease",
+                            "-moz-transition":"all 500ms ease",
+                            "-ms-transition":"all 500ms ease",
+                            "-o-transition":"all 500ms ease",
+                            "transition":"all 500ms ease",
+
+                        });
+                    } else {
+                        $("#" + id2).css({
+                            "max-width": "260px",
+                            "min-height": "100px",
+                            "background": "url(assets/img/bgbox.jpg)",
+                            "background-color": "#cc0000",
+                            "background-position":"bottom",
+                            "border-radius":"0.5em",
+                            "margin":"0 auto",
+                            "border":"0.1em dashed #fff",
+                        });
+                    }
+                });
+                
+            });
+        });
+    </script>
+</head>
+<body class="zero">
+
+    <div class="row-fluid navtop">
+        <div class="container">
+            <div class="span8">
+                <img src="assets/img/avaya.png" alt="" />
+
+            </div>
+
+            <div class="span4">
+                <img src="assets/img/response.png" alt="" />
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="container">
+            <div class="span12">
+                <div class="navswitch">
+                    <ul>
+                        <li><a href="salesTechnique.html" id="salestechnique">Sales Technique</a></li>
+                        <li><a href="GeneralScript.html" id="general">General Script</a></li>
+                        <li><a href="campaigns.html" id="campaigns">Campaigns</a></li>
+                        <li><a href="useful.html" id="campaigns" class="tabactive">Useful Links</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="sep"></div>
+
+    <div id="camp" class="container">
+
+        <!-- Primera Caja -->
+    	
+		<div class="row-fluid">
+			<div class="span6 contlist">
+					
+        		<div class="menulist">
+        			<ul>
+        				<li class="titleus"><img src="assets/img/link2.png" alt=""> Product Sales Portal</li>
+                        <p class="textuseful">Here you will find sales product info, collaterals for customers and partners, credentials and certifications, pre-sales technical info, support documentation and news, etc</p>
+                    </ul>
+                </div>
+                        <div class="uluseful">
+                            <ul>
+                                <li><a href="https://avaya.my.salesforce.com/apex/sp_ViewDetailPage?c=a3d30000000L0x1AAC&Id=a3j30000000L0mKAAS" target="_blank">Networking Portal</a></li>
+                                <li><a href="https://avaya.my.salesforce.com/apex/sp_ViewDetailPage?c=a3d30000000L1fjAAC&Id=a3j30000000L2UmAAK" target="_blank">Customer Experience Management (Contact Center) </a></li>
+                                <li><a href="https://avaya.my.salesforce.com/apex/sp_ViewDetailPage?c=a3d30000000L1P3AAK&Id=a3j30000000L2GQAA0" target="_blank">Unified Communications </a></li>
+                                <li><a href="https://avaya.my.salesforce.com/apex/sp_ViewDetailPage?c=a3d30000000L1SRAA0&Id=a3j30000000L2Y6AAK" target="_blank">Mid Market </a></li>
+                            </ul>
+                        </div>
+        				
+        			
+        		
+                    
+			</div>
+
+  <!-- Segunda Caja -->
+
+             <div class="span6 contlist">
+                    
+                <div class="menulist">
+                    <ul>
+                        <li class="titleus"><img src="assets/img/link2.png" alt=""> Marketing Campaigns</li>
+                        <p class="textuseful">Here you will find OFT, Brochures, whitepapers, videos, signatures, podcast, posters, etc</p>
+                    </ul>
+                </div>
+                        <div class="uluseful">
+                            <ul>
+                                <li><a href="https://avaya.my.salesforce.com/apex/sp_ViewDetailPage?Id=a3ja0000000LrnAAAS" target="_blank">Networking Portal</a></li>
+                                <li><a href="https://avaya.my.salesforce.com/apex/sp_GeneralDetailHome?Id=a3ja0000000LrkgAAC" target="_blank">Customer Experience Management (Contact Center) </a></li>
+                                <li><a href="https://avaya.my.salesforce.com/apex/sp_ViewDetailPage?c=a3da0000000LX9rAAG&Id=a3ja0000000LrnKAAS" target="_blank">Unified Communications </a></li>
+                                <li><a href="https://avaya.my.salesforce.com/apex/sp_ViewDetailPage?c=a3da0000000LI1qAAG&Id=a3ja0000000LrnFAAS" target="_blank">Mid Market </a></li>
+                                <li><a href="https://avaya.my.salesforce.com/apex/sp_ViewDetailPage?c=a3da0000000LXedAAG&Id=a3ja0000000Ls2YAAS" target="_blank">Verticals </a></li>
+                            </ul>
+                        </div>
+                        
+                    
+                
+                    
+            </div>
+			
+		</div>
+
+      
+
+        
+    </div>
+       
+        <div class="sep"></div>
+
+       <!-- Segunda Fila -->
+
+       <div id="camp" class="container">
+
+        <!-- Primera Caja -->
+        
+        <div class="row-fluid">
+            <div class="span6 contlist">
+                    
+                <div class="menulist">
+                    <ul>
+                        <li class="titleus"><img src="assets/img/link2.png" alt=""> Product Training session</li>
+                        
+                    </ul>
+                </div>
+                        <div class="uluseful">
+                            <ul>
+                                <li><a href="https://enterpriseportal.avaya.com/apps/cepv/train/reg.asp?pageid=67" target="_blank">What´s new</a></li>
+                                <li><a href="https://avaya.my.salesforce.com/apex/sp_ViewDetailPage?c=a3da0000000LRo2AAG&Id=a3ja0000000LfaiAAC" target="_blank">On demand </a></li>
+                                
+                            </ul>
+                        </div>
+                        
+                    
+                
+                    
+            </div>
+
+  <!-- Segunda Caja -->
+
+             <div class="span6 contlist">
+                    
+                <div class="menulist">
+                    <ul>
+                        <li class="titleus"><img src="assets/img/link2.png" alt=""> E-Learning Site</li>
+                        
+                    </ul>
+                </div>
+                        <div class="uluseful">
+                            <ul>
+                                <li><a href="https://avaya-learning.com/t/Home" target="_blank">E-Learning site </a></li>
+                                <br/>
+                                
+                            </ul>
+                        </div>
+                        
+                    
+                
+                    
+            </div>
+            
+        </div>
+
+      
+
+        
+    </div>
+
+ <div class="sep"></div>
+    
+ <!-- Tercera Fila -->
+
+
+       <div id="camp" class="container">
+
+        <!-- Primera Caja -->
+        
+        <div class="row-fluid">
+            <div class="span6 contlist">
+                    
+                <div class="menulist">
+                    <ul>
+                        <li class="titleus"><img src="assets/img/link2.png" alt=""> Events</li>
+                        
+                    </ul>
+                </div>
+                        <div class="uluseful">
+                            <ul>
+                                <li><a href="http://www.avaya-evolutions.com/" target="_blank">Avaya Evolutions </a></li>
+                                <li><a href="http://www.avaya.com/apcd" target="_blank">Avaya Partner Connection Day </a></li>
+                                <br/>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+                    
+                
+                    
+            </div>
+
+  <!-- Segunda Caja -->
+
+             <div class="span6 contlist">
+                    
+                <div class="menulist">
+                    <ul>
+                        <li class="titleus"><img src="assets/img/link2.png" alt=""> Look up Tools</li>
+                        
+                    </ul>
+                </div>
+                        <div class="uluseful">
+                            <ul>
+                                <li><a href="http://sss.avaya.com/Lookup/iTAM.aspx" target="_blank">ITAM </a></li>
+                                <li><a href="https://enterpriseportal.avaya.com/apps/pmapswebsearch/accountlookup/accountlookup.htm" target="_blank">Account  </a></li>
+                                <li><a href="http://careportal.us1.avaya.com/portal/module/Find_DB_Customer.asp" target="_blank">CMDT Tool  </a></li>
+                                
+                            </ul>
+                        </div>
+                        
+                    
+                
+                    
+            </div>
+            
+        </div>
+
+      
+
+        
+    </div>
+
+
+     <div class="sep"></div>
+    
+<!-- Cuarta Fila -->
+
+    <div id="camp" class="container">
+
+        <!-- Primera Caja -->
+        
+        <div class="row-fluid">
+            <div class="span6 contlist">
+                    
+                <div class="menulist">
+                    <ul>
+                        <li class="titleus"><img src="assets/img/link2.png" alt=""> Other sites</li>
+                        
+                    </ul>
+                </div>
+                        <div class="uluseful">
+                            <ul>
+                                <li><a href="https://thesource.avaya.com/" target="_blank">The Source  </a></li>
+                                <li><a href="http://www.avaya.com/usa/" target="_blank">Avaya.com  </a></li>
+                                <li><a href="http://www.post.avaya.com/" target="_blank">POST  </a></li>
+                                <li><a href="http://itss.avaya.com/" target="_blank">ITSS  </a></li>
+                                <li><a href="http://avayamarketleaders.com/admin/login.aspx" target="_blank">Market Leaders   </a></li>
+                                
+                            </ul>
+                        </div>
+                        
+                    
+                
+                    
+            </div>
+
+  <!-- Segunda Caja -->
+
+             
+
+      
+
+        
+    </div>
+   
+
+    
+
+</body>
+</html>
+
+

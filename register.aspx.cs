@@ -62,7 +62,7 @@ public partial class register : System.Web.UI.Page
         return result;
     }
 
-    public static string validarIngreso(string name, string pass, string app)
+    public static string validarIngreso(string username, string pass, string app)
     {
 
         string resultado = "";
@@ -70,26 +70,20 @@ public partial class register : System.Web.UI.Page
         SqlConnection con = new SqlConnection();
         con.ConnectionString = ConfigurationManager.ConnectionStrings["calawebConnectionString"].ToString();
 
-        string strSQL = "SELECT (usuario + ','+ email_empresa) as datos from UserData where password = @pass and application = @app and (usuario = @name or email_empresa = @name)";
+        string strSQL = "SELECT distinct username from Tbl_ResponseTool_Users where username = @username and password = @password ";
         SqlCommand cmd = new SqlCommand(strSQL, con);
-        cmd.Parameters.Add("@name", SqlDbType.VarChar, 150);
-        cmd.Parameters.Add("@pass", SqlDbType.VarChar, 300);
-        cmd.Parameters.Add("@app", SqlDbType.VarChar, 100);
+        cmd.Parameters.Add("@username", SqlDbType.VarChar, 50);
+        cmd.Parameters.Add("@password", SqlDbType.VarChar, 100);
        
-        cmd.Parameters["@name"].Value = name;
-        cmd.Parameters["@pass"].Value = pass;
-        cmd.Parameters["@app"].Value = app;
+        cmd.Parameters["@username"].Value = username;
+        cmd.Parameters["@password"].Value = pass;
 
         try
         {
             con.Open();
-            usuario = (String)cmd.ExecuteScalar();
-            var test = usuario.Split(',');
-            string nombre = test[0];
-            string correo = test[1];
-
+            usuario = (String) cmd.ExecuteScalar();
             con.Close();
-            if ((name == nombre) || (name == correo))
+            if (username == usuario)
             {
                 resultado = "ok";
             }

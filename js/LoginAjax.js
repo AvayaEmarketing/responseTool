@@ -20,7 +20,6 @@ $(document).keypress(function (e) {
 
 
 $(document).ready(function () {
-    
     $("#login").click(function () {
         $.prettyLoader();
         var pass = $("#UserPass").val();

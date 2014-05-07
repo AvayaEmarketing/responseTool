@@ -154,7 +154,7 @@ public partial class register : System.Web.UI.Page
         SqlConnection con = new SqlConnection();
         con.ConnectionString = ConfigurationManager.ConnectionStrings["calawebConnectionString"].ToString();
 
-        string strSQL = "SELECT distinct email_empresa from UserData where email_empresa = @email and application = 'sales_tool'";
+        string strSQL = "SELECT distinct email from Tbl_ResponseTool_Users where email = @email";
         SqlCommand cmd = new SqlCommand(strSQL, con);
         cmd.Parameters.Add("@email", SqlDbType.VarChar, 150);
         cmd.Parameters["@email"].Value = email;
@@ -201,7 +201,7 @@ public partial class register : System.Web.UI.Page
         con.ConnectionString = ConfigurationManager.ConnectionStrings["calawebConnectionString"].ToString();
         if (validarEmail(email) == "ok")
         {
-            string strSQL = "update UserData set password = @pass where email_empresa = @email and application = 'sales_tool'";
+            string strSQL = "update Tbl_ResponseTool_Users set password = @pass where email = @email";
             SqlCommand cmd = new SqlCommand(strSQL, con);
             cmd.Parameters.Add("@email", SqlDbType.VarChar, 150);
             cmd.Parameters.Add("@pass", SqlDbType.VarChar, 300);

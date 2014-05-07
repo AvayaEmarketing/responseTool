@@ -13,26 +13,10 @@
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="js/prettyLoader.js"></script>
+	<script type="text/javascript" src="js/validateSession.js"></script>
 
     <script type="text/javascript">
         // From: http://www.webdeveloper.com/forum/showthread.php?266743-Switch-Div-Content-Using-Javascript&p=1229155#post1229155
-
-       function validaSession() {
-            $.prettyLoader();
-            $.ajax({
-                type: "POST",
-                url: "admin.aspx/validaSession",
-                contentType: "application/json; charset=utf-8",
-                data: '{}',
-                dataType: "json",
-                success: function (resultado) {
-                    if (resultado.d === "fail") {
-                        document.location.href = "admin.aspx";
-                    }
-                }
-            });
-            return false;
-        }
 
         $(document).ready(function () {
             $('body').on('click', ".buttonbox", function () {

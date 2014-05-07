@@ -58,6 +58,8 @@ public partial class register : System.Web.UI.Page
         {
             var sessionUsuario = HttpContext.Current.Session;
             sessionUsuario["ID"] = name;
+			//como el resultado del ingreso fué exitoso aqui se llama una función para que actualice el campo date_last_access insertando la fecha y hora de ingreso.
+			actualizarFechaAcceso(name);
         }
         return result;
     }
@@ -286,7 +288,35 @@ public partial class register : System.Web.UI.Page
         }
         return respuesta;
     }
-
-
+	
+	public static void actualizarFechaAcceso(string name){
+	
+		string result = "";
+		
+        SqlConnection con = new SqlConnection();
+        con.ConnectionString = ConfigurationManager.ConnectionStrings["calawebConnectionString"].ToString();		
+		
+		string stmt = "UPDATE Tbl_ResponseTool_Users set date_last_access = (SELECT CURRENT_TIMESTAMP AS registerDate) WHERE username=@name";
+		SqlCommand cmd2 = new SqlCommand(stmt, con);
+        cmd2.Parameters.Add("@name", SqlDbType.VarChar, 100);
+        cmd2.Parameters["@name"].Value = name;
+		try
+        {
+            con.Open();
+            cmd2.ExecuteNonQuery();
+            con.Close();
+            result = "ok";
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            result = "fail";
+        }
+        finally
+        {
+            con.Close();
+        }
+	}
+	
 }
 
